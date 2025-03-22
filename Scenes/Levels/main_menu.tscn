@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://vrke8yyjwte5"]
+[gd_scene load_steps=11 format=3 uid="uid://vrke8yyjwte5"]
 
 [ext_resource type="Texture2D" uid="uid://bhq0spg5enkg3" path="res://Sprites/environments/hub-zoo.png" id="1_mmega"]
 [ext_resource type="FontFile" uid="uid://vlkshjxq24pw" path="res://fonts/Coffe Break.otf" id="1_pmxgl"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://t1gwjckj78xw" path="res://Sprites/menus/menu_button.png" id="3_lb7sl"]
 [ext_resource type="Script" path="res://Scripts/menus/main_menu.gd" id="4_bug83"]
 [ext_resource type="AudioStream" uid="uid://dhrmqx60gym46" path="res://musics/Music_Hub-Loop.ogg" id="5_relw5"]
+[ext_resource type="AudioStream" uid="uid://kskn8n0rxxnb" path="res://sfxs/SFX_Click.wav" id="6_wpu3y"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_uxfbl"]
 texture = ExtResource("1_mmega")
@@ -107,6 +108,10 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("4_bug83")
+
+[node name="ButtonPressedSound" type="AudioStreamPlayer" parent="MainMenuManager"]
+unique_name_in_owner = true
+stream = ExtResource("6_wpu3y")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_relw5")

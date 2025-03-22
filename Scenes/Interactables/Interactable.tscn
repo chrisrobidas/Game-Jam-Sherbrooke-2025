@@ -1,11 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://dxjkypukxc8i3"]
+[gd_scene load_steps=4 format=3 uid="uid://dxjkypukxc8i3"]
 
 [ext_resource type="Script" path="res://Scripts/Interactable.gd" id="1_cu8j4"]
-[ext_resource type="Texture2D" uid="uid://uwixha12pprl" path="res://Sprites/Brick.png" id="2_52ijm"]
 [ext_resource type="Shader" path="res://Shaders/Hover.gdshader" id="3_hpwfv"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_hv1av"]
-size = Vector2(420, 210)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_0j4ff"]
 shader = ExtResource("3_hpwfv")
@@ -15,14 +11,12 @@ shader_parameter/isHovered = false
 script = ExtResource("1_cu8j4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("RectangleShape2D_hv1av")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 3
 texture_repeat = 2
 material = SubResource("ShaderMaterial_0j4ff")
 position = Vector2(1, 3.45707e-06)
-scale = Vector2(13.1875, 6.5625)
-texture = ExtResource("2_52ijm")
+scale = Vector2(1e-05, 1e-05)
 region_enabled = true
 region_rect = Rect2(20, 5, 32, 32)

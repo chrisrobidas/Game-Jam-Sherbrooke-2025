@@ -1,16 +1,22 @@
-[gd_scene load_steps=4 format=3 uid="uid://bd3udvnku08kp"]
+[gd_scene load_steps=6 format=3 uid="uid://bd3udvnku08kp"]
 
 [ext_resource type="PackedScene" uid="uid://iyae0o3nug2t" path="res://Scenes/Interactables/Collectable.tscn" id="1_y7uwb"]
 [ext_resource type="PackedScene" uid="uid://jgi5dj08advr" path="res://Scenes/Inventory/LunettesDeSoleil.tscn" id="2_p2nmt"]
-[ext_resource type="PackedScene" uid="uid://bjoy6kpl0wtab" path="res://Scenes/Inventory/Inventory.tscn" id="3_okj5f"]
+[ext_resource type="PackedScene" uid="uid://dn86b0lkdt015" path="res://user_interfaces/Inventory.tscn" id="3_4vogc"]
+[ext_resource type="Texture2D" uid="uid://mbiiq51syscb" path="res://Sprites/Sunglasses.png" id="3_f7f8q"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6m2x2"]
+size = Vector2(30, 20)
 
 [node name="Point&clickTestLevel" type="Node2D"]
 
 [node name="Collectable" parent="." node_paths=PackedStringArray("inventory", "item") instance=ExtResource("1_y7uwb")]
-position = Vector2(955, 175)
+position = Vector2(700, 135)
 inventory = NodePath("../Inventory")
 item = NodePath("LunettesDeSoleil")
+selectableAreaShape = SubResource("RectangleShape2D_6m2x2")
 
 [node name="LunettesDeSoleil" parent="Collectable" instance=ExtResource("2_p2nmt")]
+itemImage = ExtResource("3_f7f8q")
 
-[node name="Inventory" parent="." instance=ExtResource("3_okj5f")]
+[node name="Inventory" parent="." instance=ExtResource("3_4vogc")]

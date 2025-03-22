@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://dlpwb8jc10b7w"]
 
-[ext_resource type="Texture2D" uid="uid://nvptd0glfkp8" path="res://sprites/dialogue_button.png" id="1_rjv3a"]
-[ext_resource type="Texture2D" uid="uid://dwod45j4o4f53" path="res://sprites/dialogue_background.png" id="1_tdh7q"]
-[ext_resource type="Texture2D" uid="uid://c6dgslhvbacwp" path="res://sprites/monkey_yes_it_is_one.png" id="2_jwl0j"]
+[ext_resource type="Texture2D" uid="uid://nvptd0glfkp8" path="res://Sprites/dialogue_button.png" id="1_rjv3a"]
+[ext_resource type="Texture2D" uid="uid://dwod45j4o4f53" path="res://Sprites/dialogue_background.png" id="1_tdh7q"]
+[ext_resource type="Texture2D" uid="uid://c6dgslhvbacwp" path="res://Sprites/monkey_yes_it_is_one.png" id="2_jwl0j"]
 [ext_resource type="FontFile" uid="uid://vlkshjxq24pw" path="res://fonts/Coffe Break.otf" id="3_0sxxl"]
 
 [node name="DialoguePanel" type="Panel"]

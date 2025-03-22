@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://jgi5dj08advr"]
+
+[ext_resource type="Script" path="res://Scripts/InventoryItem.gd" id="1_7dblo"]
+
+[node name="LunettesDeSoleil" type="Node"]
+script = ExtResource("1_7dblo")
+itemId = 1
+itemName = "Lunettes de Soleil"

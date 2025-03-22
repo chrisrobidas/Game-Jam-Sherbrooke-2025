@@ -6,7 +6,8 @@ class_name Interactable extends Area2D
 @export var isInteractionEnabled = true
 @export var selectableAreaShape: RectangleShape2D:
 	set(newAreaShape):
-		SetCollisionShape(newAreaShape)
+		selectableAreaShape = newAreaShape
+		$CollisionShape2D.set_shape(newAreaShape)
 		
 @onready var sprite2D = $Sprite2D
 
@@ -21,10 +22,6 @@ func _input(event: InputEvent) -> void:
 
 func SetHovered(isHovered: bool) -> void:
 	self.isHovered = isHovered
-
-func SetCollisionShape(newCollisionShape: RectangleShape2D):
-	selectableAreaShape = newCollisionShape
-	$CollisionShape2D.set_shape(selectableAreaShape)
 
 func Interact() -> void:
 	print("Calling empty interact function ;P")

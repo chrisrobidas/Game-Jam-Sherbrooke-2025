@@ -1,6 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://dn86b0lkdt015"]
+[gd_scene load_steps=3 format=3 uid="uid://dn86b0lkdt015"]
 
 [ext_resource type="Script" path="res://Scripts/Inventory.gd" id="1_l2x51"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oj3c5"]
+bg_color = Color(0.858824, 0.501961, 0, 0)
 
 [node name="Inventory" type="Control"]
 layout_mode = 3
@@ -10,11 +13,13 @@ script = ExtResource("1_l2x51")
 [node name="ItemList" type="ItemList" parent="."]
 texture_filter = 3
 layout_mode = 0
-offset_right = 168.0
-offset_bottom = 184.0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 74.0
+offset_bottom = 10.0
 focus_mode = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_oj3c5")
 allow_search = false
 auto_height = true
-item_count = 1
 fixed_column_width = 50
 fixed_icon_size = Vector2i(64, 64)

@@ -1,3 +1,11 @@
-[gd_scene format=3 uid="uid://c7g16acc6oeem"]
+[gd_scene load_steps=3 format=3 uid="uid://c7g16acc6oeem"]
+
+[ext_resource type="PackedScene" uid="uid://b354i0ylclgto" path="res://Scenes/Interactables/DialogueTrigger.tscn" id="1_2xuvu"]
+[ext_resource type="Resource" uid="uid://b64fu1xswy1er" path="res://dialogues/singe_gorille.dialogue" id="2_n8tso"]
 
 [node name="DialogueTestLevel" type="Node2D"]
+
+[node name="DialogueTrigger" parent="." instance=ExtResource("1_2xuvu")]
+position = Vector2(361, 244)
+dialogue_ressource = ExtResource("2_n8tso")
+dialogue_start = "singe_gorille"

@@ -1,0 +1,9 @@
+~ singe_gorille
+singe-heureux: [[Salut mon pote!|Salut mon gros!]], Comment vas-tu?
+gorille-neutre: Laisse moi tranquille minus...
+- Désolé de t'avoir déranger.
+	singe-neutre: Désolé de t'avoir déranger.
+- Non mais on ne me parle pas comme ça!!!
+	singe-fache: Non mais on ne me parle pas comme ça!!!
+	gorille-fache: Dégage avant que je t'écrase!
+=> END

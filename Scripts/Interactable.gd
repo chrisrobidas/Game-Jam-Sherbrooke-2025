@@ -1,7 +1,14 @@
+@tool
+
 class_name Interactable extends Area2D
 
-var isHovered = false
-var isInteractionEnabled = true
+@export var isHovered = false
+@export var isInteractionEnabled = true
+@export var selectableAreaShape: RectangleShape2D:
+	set(newAreaShape):
+		selectableAreaShape = newAreaShape
+		$CollisionShape2D.set_shape(newAreaShape)
+		
 @onready var sprite2D = $Sprite2D
 
 # Called when the node enters the scene tree for the first time.
@@ -15,7 +22,6 @@ func _input(event: InputEvent) -> void:
 
 func SetHovered(isHovered: bool) -> void:
 	self.isHovered = isHovered
-	sprite2D.material.set_shader_parameter("isHovered", isHovered)
 
 func Interact() -> void:
 	print("Calling empty interact function ;P")

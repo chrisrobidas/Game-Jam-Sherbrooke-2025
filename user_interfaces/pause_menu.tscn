@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://ck7xmyrrj1nil"]
+[gd_scene load_steps=9 format=3 uid="uid://qkgqubbya8m7"]
 
 [ext_resource type="FontFile" uid="uid://vlkshjxq24pw" path="res://fonts/Coffe Break.otf" id="1_bf5wb"]
 [ext_resource type="Texture2D" uid="uid://c6yctw8fjtuag" path="res://Sprites/menus/menu_button_hover.png" id="2_cmxpy"]

@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://iyae0o3nug2t" path="res://Scenes/Interactables/Collectable.tscn" id="1_y7uwb"]
 [ext_resource type="PackedScene" uid="uid://jgi5dj08advr" path="res://Scenes/Inventory/LunettesDeSoleil.tscn" id="2_p2nmt"]
-[ext_resource type="PackedScene" uid="uid://xlkdk0hqyrf0" path="res://user_interfaces/Inventory.tscn" id="3_4vogc"]
+[ext_resource type="PackedScene" uid="uid://xlkdk0hqyrf0" path="res://user_interfaces/ShowInventory.tscn" id="3_4vogc"]
 [ext_resource type="Texture2D" uid="uid://mbiiq51syscb" path="res://Sprites/Sunglasses.png" id="3_f7f8q"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rgo6k"]
@@ -10,11 +10,12 @@ size = Vector2(50, 50)
 
 [node name="Point&clickTestLevel" type="Node2D"]
 
-[node name="Collectable" parent="." node_paths=PackedStringArray("inventory", "item") instance=ExtResource("1_y7uwb")]
+[node name="Collectable" parent="." node_paths=PackedStringArray("item") instance=ExtResource("1_y7uwb")]
 position = Vector2(700, 135)
-inventory = NodePath("../Inventory")
 item = NodePath("LunettesDeSoleil")
 imageScale = 2.0
+isHovered = null
+isInteractionEnabled = null
 selectableAreaShape = SubResource("RectangleShape2D_rgo6k")
 
 [node name="LunettesDeSoleil" parent="Collectable" instance=ExtResource("2_p2nmt")]

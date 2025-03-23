@@ -1,0 +1,150 @@
+[gd_scene load_steps=9 format=3 uid="uid://qkgqubbya8m7"]
+
+[ext_resource type="FontFile" uid="uid://vlkshjxq24pw" path="res://fonts/Coffe Break.otf" id="1_bf5wb"]
+[ext_resource type="Texture2D" uid="uid://c6yctw8fjtuag" path="res://Sprites/menus/menu_button_hover.png" id="2_cmxpy"]
+[ext_resource type="Texture2D" uid="uid://t1gwjckj78xw" path="res://Sprites/menus/menu_button.png" id="3_feqhk"]
+[ext_resource type="Script" path="res://Scripts/menus/pause_menu.gd" id="4_whnbo"]
+[ext_resource type="AudioStream" uid="uid://kskn8n0rxxnb" path="res://sfxs/SFX_Click.wav" id="5_fn3gl"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f0eku"]
+bg_color = Color(0, 0, 0, 0.0784314)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_kxw8a"]
+texture = ExtResource("2_cmxpy")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_y53if"]
+texture = ExtResource("3_feqhk")
+
+[node name="PauseMenu" type="Control"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PauseMenuPanel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_f0eku")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PauseMenuPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Margin3" type="Control" parent="PauseMenuPanel/VBoxContainer"]
+custom_minimum_size = Vector2(0, 70)
+layout_mode = 2
+
+[node name="PauseLabel" type="Label" parent="PauseMenuPanel/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(1, 0.976471, 0.309804, 1)
+theme_override_fonts/font = ExtResource("1_bf5wb")
+theme_override_font_sizes/font_size = 108
+text = "Pause"
+
+[node name="Margin4" type="Control" parent="PauseMenuPanel/VBoxContainer"]
+custom_minimum_size = Vector2(0, 180)
+layout_mode = 2
+
+[node name="TitleLabel" type="Label" parent="PauseMenuPanel/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(1, 0.976471, 0.309804, 1)
+theme_override_fonts/font = ExtResource("1_bf5wb")
+theme_override_font_sizes/font_size = 108
+text = "La Grande Évasion du Zoo"
+
+[node name="Margin" type="Control" parent="PauseMenuPanel/VBoxContainer"]
+custom_minimum_size = Vector2(0, 70)
+layout_mode = 2
+
+[node name="ResumeButton" type="Button" parent="PauseMenuPanel/VBoxContainer"]
+custom_minimum_size = Vector2(500, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("1_bf5wb")
+theme_override_font_sizes/font_size = 56
+theme_override_styles/focus = SubResource("StyleBoxTexture_kxw8a")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxTexture_kxw8a")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_kxw8a")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxTexture_kxw8a")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_kxw8a")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxTexture_kxw8a")
+theme_override_styles/hover = SubResource("StyleBoxTexture_kxw8a")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxTexture_kxw8a")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_kxw8a")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxTexture_y53if")
+theme_override_styles/normal = SubResource("StyleBoxTexture_y53if")
+text = "Continuer"
+
+[node name="Margin2" type="Control" parent="PauseMenuPanel/VBoxContainer"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+
+[node name="MainMenuButton" type="Button" parent="PauseMenuPanel/VBoxContainer"]
+custom_minimum_size = Vector2(500, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("1_bf5wb")
+theme_override_font_sizes/font_size = 56
+theme_override_styles/focus = SubResource("StyleBoxTexture_kxw8a")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxTexture_kxw8a")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_kxw8a")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxTexture_kxw8a")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_kxw8a")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxTexture_kxw8a")
+theme_override_styles/hover = SubResource("StyleBoxTexture_kxw8a")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxTexture_kxw8a")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_kxw8a")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxTexture_y53if")
+theme_override_styles/normal = SubResource("StyleBoxTexture_y53if")
+text = "Menu Principal"
+
+[node name="Margin5" type="Control" parent="PauseMenuPanel/VBoxContainer"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+
+[node name="QuitButton" type="Button" parent="PauseMenuPanel/VBoxContainer"]
+custom_minimum_size = Vector2(500, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("1_bf5wb")
+theme_override_font_sizes/font_size = 56
+theme_override_styles/focus = SubResource("StyleBoxTexture_kxw8a")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxTexture_kxw8a")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_kxw8a")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxTexture_kxw8a")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_kxw8a")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxTexture_kxw8a")
+theme_override_styles/hover = SubResource("StyleBoxTexture_kxw8a")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxTexture_kxw8a")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_kxw8a")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxTexture_y53if")
+theme_override_styles/normal = SubResource("StyleBoxTexture_y53if")
+text = "Quitter"
+
+[node name="PauseMenuManager" type="Control" parent="."]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("4_whnbo")
+
+[node name="ButtonPressedSound" type="AudioStreamPlayer" parent="PauseMenuManager"]
+unique_name_in_owner = true
+stream = ExtResource("5_fn3gl")
+
+[connection signal="pressed" from="PauseMenuPanel/VBoxContainer/ResumeButton" to="PauseMenuManager" method="_on_resume_button_pressed"]
+[connection signal="pressed" from="PauseMenuPanel/VBoxContainer/MainMenuButton" to="PauseMenuManager" method="_on_main_menu_button_pressed"]
+[connection signal="pressed" from="PauseMenuPanel/VBoxContainer/QuitButton" to="PauseMenuManager" method="_on_quit_button_pressed"]

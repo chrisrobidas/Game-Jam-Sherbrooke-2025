@@ -2,7 +2,7 @@
 
 class_name Collectable extends Interactable
 
-@export var inventory: Inventory
+@export var show_inventory: ShowInventory
 @export var item: InventoryItem
 @export var imageScale: float = 1.0:
 	set(newImageScale):
@@ -14,7 +14,7 @@ func _ready() -> void:
 	$Sprite2D.texture = item.itemImage
 
 func Interact() -> void:
-	if (inventory != null):
-		inventory.CollectItem(item)
-		self.isInteractionEnabled = false;
-		self.hide()
+	PlayerInventory.CollectItem(item)
+	show_inventory.UpdateItemList()
+	self.isInteractionEnabled = false;
+	self.hide()

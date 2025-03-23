@@ -1,3 +1,37 @@
-[gd_scene format=3 uid="uid://c7g16acc6oeem"]
+[gd_scene load_steps=9 format=3 uid="uid://c7g16acc6oeem"]
+
+[ext_resource type="PackedScene" uid="uid://b354i0ylclgto" path="res://Scenes/Interactables/DialogueTrigger.tscn" id="1_2xuvu"]
+[ext_resource type="Resource" uid="uid://b64fu1xswy1er" path="res://dialogues/singe_gorille_rencontre.dialogue" id="2_n8tso"]
+[ext_resource type="PackedScene" uid="uid://qkgqubbya8m7" path="res://user_interfaces/pause_menu.tscn" id="3_j3vdt"]
+[ext_resource type="PackedScene" uid="uid://iyae0o3nug2t" path="res://Scenes/Interactables/Collectable.tscn" id="4_tjc4t"]
+[ext_resource type="PackedScene" uid="uid://jgi5dj08advr" path="res://Scenes/Inventory/LunettesDeSoleil.tscn" id="5_wpxi4"]
+[ext_resource type="Texture2D" uid="uid://mbiiq51syscb" path="res://Sprites/Sunglasses.png" id="6_u1qe2"]
+[ext_resource type="PackedScene" uid="uid://xlkdk0hqyrf0" path="res://user_interfaces/ShowInventory.tscn" id="7_qqvsl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7itjp"]
+size = Vector2(50, 50)
 
 [node name="DialogueTestLevel" type="Node2D"]
+
+[node name="DialogueTrigger" parent="." instance=ExtResource("1_2xuvu")]
+position = Vector2(361, 244)
+dialogue_ressource = ExtResource("2_n8tso")
+dialogue_start = "singe_gorille_rencontre"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="PauseMenu" parent="CanvasLayer" instance=ExtResource("3_j3vdt")]
+visible = false
+
+[node name="Collectable" parent="." node_paths=PackedStringArray("show_inventory", "item") instance=ExtResource("4_tjc4t")]
+position = Vector2(700, 135)
+show_inventory = NodePath("../ShowInventory")
+item = NodePath("Banane")
+imageScale = 2.0
+selectableAreaShape = SubResource("RectangleShape2D_7itjp")
+
+[node name="Banane" parent="Collectable" instance=ExtResource("5_wpxi4")]
+itemName = "Banane"
+itemImage = ExtResource("6_u1qe2")
+
+[node name="ShowInventory" parent="." instance=ExtResource("7_qqvsl")]

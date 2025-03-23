@@ -1,13 +1,14 @@
-[gd_scene load_steps=9 format=3 uid="uid://qkgqubbya8m7"]
+[gd_scene load_steps=10 format=3 uid="uid://qkgqubbya8m7"]
 
 [ext_resource type="FontFile" uid="uid://vlkshjxq24pw" path="res://fonts/Coffe Break.otf" id="1_bf5wb"]
 [ext_resource type="Texture2D" uid="uid://c6yctw8fjtuag" path="res://Sprites/menus/menu_button_hover.png" id="2_cmxpy"]
+[ext_resource type="Texture2D" uid="uid://bdts06mmu8p6j" path="res://Sprites/logo.png" id="2_cyy0j"]
 [ext_resource type="Texture2D" uid="uid://t1gwjckj78xw" path="res://Sprites/menus/menu_button.png" id="3_feqhk"]
 [ext_resource type="Script" path="res://Scripts/menus/pause_menu.gd" id="4_whnbo"]
 [ext_resource type="AudioStream" uid="uid://kskn8n0rxxnb" path="res://sfxs/SFX_Click.wav" id="5_fn3gl"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f0eku"]
-bg_color = Color(0, 0, 0, 0.0784314)
+bg_color = Color(0, 0, 0, 0.235294)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_kxw8a"]
 texture = ExtResource("2_cmxpy")
@@ -54,16 +55,16 @@ theme_override_font_sizes/font_size = 108
 text = "Pause"
 
 [node name="Margin4" type="Control" parent="PauseMenuPanel/VBoxContainer"]
-custom_minimum_size = Vector2(0, 180)
+custom_minimum_size = Vector2(0, 20)
 layout_mode = 2
 
-[node name="TitleLabel" type="Label" parent="PauseMenuPanel/VBoxContainer"]
+[node name="TextureRect" type="TextureRect" parent="PauseMenuPanel/VBoxContainer"]
+custom_minimum_size = Vector2(685, 382)
 layout_mode = 2
 size_flags_horizontal = 4
-theme_override_colors/font_color = Color(1, 0.976471, 0.309804, 1)
-theme_override_fonts/font = ExtResource("1_bf5wb")
-theme_override_font_sizes/font_size = 108
-text = "La Grande Évasion du Zoo"
+size_flags_vertical = 4
+texture = ExtResource("2_cyy0j")
+expand_mode = 1
 
 [node name="Margin" type="Control" parent="PauseMenuPanel/VBoxContainer"]
 custom_minimum_size = Vector2(0, 70)

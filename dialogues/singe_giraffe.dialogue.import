@@ -3,11 +3,12 @@
 importer="dialogue_manager_compiler_13"
 type="Resource"
 uid="uid://f58i1asjx1i3"
-valid=false
+path="res://.godot/imported/singe_giraffe.dialogue-7082c7c6300d1ed50fbd17d2f506e78c.tres"
 
 [deps]
 
 source_file="res://dialogues/singe_giraffe.dialogue"
+dest_files=["res://.godot/imported/singe_giraffe.dialogue-7082c7c6300d1ed50fbd17d2f506e78c.tres"]
 
 [params]
 

@@ -1,11 +1,15 @@
-~ this_is_a_node_title
-Nathan: [[Hi|Hello|Howdy]], this is some dialogue.
-Nathan: Here are some choices.
-- First one
-	Nathan: You picked the first one.
-- Second one
-	Nathan: You picked the second one.
-- Start again => this_is_a_node_title
-- End the conversation => END
-Nathan: For more information see the online documentation.
-=> END
+~ singe_garde
+singe-neutre: Devrais-t-on vraiment essayer de passer?
+gorille-heureux: Oui on y va maintenant!
+- Continuer
+	if "Supplements" in PlayerInventory.item_names:
+		singe-neutre: (Vous donner les suppléments au gorille)
+		gorille-fache: Argggggg dégage de là
+		gorille-fache: (Le gorille nous prend par la queue et nous cogne avec le garde)
+		gorille-heureux: Je suis le roi des animaux, je suis trop fort. Enfin la liberté!!!
+		do PlayerGameState.show_gorilla_ending()
+	else:
+		garde-neutre: Stop! Vous ne pouvez pas sortir!
+		garde-neutre: (Le garde tire des flèches tranquilisantes sur nous et le gorille)
+		do PlayerGameState.show_bad_ending()
+- Laisser tomber => END

@@ -11,7 +11,7 @@ signal items_changed
 func CollectItem(item: InventoryItem):
 	print("Item ", item.itemName, " has been collected.")
 	PlayerInventory.items.push_back(item)
-	PlayerInventory.item_names.push_back(item.name)
+	PlayerInventory.item_names.push_back(item.itemName)
 	items_changed.emit()
 
 func UseItem(index: int):

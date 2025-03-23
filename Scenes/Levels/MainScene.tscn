@@ -1,62 +1,78 @@
-[gd_scene load_steps=29 format=3 uid="uid://dxci74ilmdpkw"]
+[gd_scene load_steps=44 format=3 uid="uid://dxci74ilmdpkw"]
 
-[ext_resource type="Script" path="res://Scripts/MainScene.gd" id="1_pkgwm"]
-[ext_resource type="Texture2D" uid="uid://dakk7uxe5itja" path="res://Sprites/backgrounds/hub-zoo.png" id="2_tohvn"]
-[ext_resource type="Texture2D" uid="uid://bvpnpbr4rsytj" path="res://Sprites/backgrounds/enclos-girafe.png" id="4_5nvnw"]
-[ext_resource type="PackedScene" uid="uid://chvimoj6pow03" path="res://Scenes/Interactables/AreaMove.tscn" id="4_bjyq2"]
-[ext_resource type="Texture2D" uid="uid://dyj6qfcehh6dd" path="res://Sprites/backgrounds/cage-singe.png" id="5_1xjj8"]
-[ext_resource type="Texture2D" uid="uid://bpwalujrgs283" path="res://Sprites/backgrounds/gate.png" id="6_0w5ee"]
-[ext_resource type="Texture2D" uid="uid://c75042jo4nvll" path="res://Sprites/backgrounds/koi-pond.jpg" id="7_rooud"]
-[ext_resource type="Texture2D" uid="uid://bi68d6vn1bgjb" path="res://Sprites/backgrounds/pharmacie.png" id="8_k3ie1"]
-[ext_resource type="Texture2D" uid="uid://bvd0rbg4o57me" path="res://Sprites/overworldCharacters/girafe-complete.png" id="9_hphbr"]
-[ext_resource type="Texture2D" uid="uid://maj672ghsa1h" path="res://Sprites/items/banane.png" id="9_ope5j"]
-[ext_resource type="Texture2D" uid="uid://c45ne1dplxtpu" path="res://Sprites/backgrounds/terrier-taupe.png" id="9_qkscn"]
-[ext_resource type="PackedScene" uid="uid://iyae0o3nug2t" path="res://Scenes/Interactables/Collectable.tscn" id="10_fiy5w"]
-[ext_resource type="PackedScene" uid="uid://2jp27imlxhs3" path="res://user_interfaces/ShowInventory.tscn" id="10_fu01j"]
-[ext_resource type="PackedScene" uid="uid://cdnuh4k2dg714" path="res://Scenes/Inventory/InventoryItem.tscn" id="11_7c7gj"]
-[ext_resource type="PackedScene" uid="uid://qkgqubbya8m7" path="res://user_interfaces/pause_menu.tscn" id="11_vk54y"]
-[ext_resource type="Texture2D" uid="uid://cma6emotjbj25" path="res://Sprites/items/feuille.png" id="12_8n7qr"]
-[ext_resource type="Texture2D" uid="uid://50yp6quvv00g" path="res://Sprites/items/lunettes.png" id="12_el6wr"]
-[ext_resource type="Texture2D" uid="uid://61mjs0t4iadq" path="res://Sprites/overworldCharacters/gorille-complet.png" id="12_r7vxo"]
-[ext_resource type="Texture2D" uid="uid://omu2o1587wrk" path="res://Sprites/items/supplements.png" id="14_t5mqh"]
-[ext_resource type="Texture2D" uid="uid://b2mnkgx1tuakl" path="res://Sprites/items/cle-enfouie.png" id="15_42mth"]
-[ext_resource type="PackedScene" uid="uid://bfqet8c65sv6m" path="res://Scenes/Interactables/DialogueTrigger.tscn" id="17_tunkn"]
+[ext_resource type="Script" path="res://Scripts/MainScene.gd" id="1_rnxxp"]
+[ext_resource type="Texture2D" uid="uid://dakk7uxe5itja" path="res://Sprites/backgrounds/hub-zoo.png" id="2_aymgc"]
+[ext_resource type="PackedScene" uid="uid://chvimoj6pow03" path="res://scenes/Interactables/AreaMove.tscn" id="3_lel4f"]
+[ext_resource type="Script" path="res://Scripts/door.gd" id="4_t8qf2"]
+[ext_resource type="Resource" uid="uid://b46rc7idyivyi" path="res://dialogues/singe_porte.dialogue" id="5_8bj5l"]
+[ext_resource type="Resource" uid="uid://b5ccganrvq1sl" path="res://dialogues/singe_porte_deverouille.dialogue" id="6_vbcqk"]
+[ext_resource type="PackedScene" uid="uid://iyae0o3nug2t" path="res://scenes/Interactables/Collectable.tscn" id="7_sf7s4"]
+[ext_resource type="PackedScene" uid="uid://cdnuh4k2dg714" path="res://scenes/Inventory/InventoryItem.tscn" id="8_nt6cm"]
+[ext_resource type="Texture2D" uid="uid://cma6emotjbj25" path="res://Sprites/items/feuille.png" id="9_xjaft"]
+[ext_resource type="Texture2D" uid="uid://bvpnpbr4rsytj" path="res://Sprites/backgrounds/enclos-girafe.png" id="10_4rovs"]
+[ext_resource type="Texture2D" uid="uid://bn33yxly5w7nn" path="res://Sprites/menus/Back.png" id="11_q0rxm"]
+[ext_resource type="PackedScene" uid="uid://bfqet8c65sv6m" path="res://scenes/Interactables/DialogueTrigger.tscn" id="12_srf10"]
+[ext_resource type="Resource" uid="uid://f58i1asjx1i3" path="res://dialogues/singe_giraffe.dialogue" id="13_xdrct"]
+[ext_resource type="Texture2D" uid="uid://bvd0rbg4o57me" path="res://Sprites/overworldCharacters/girafe-complete.png" id="14_ya3dn"]
+[ext_resource type="Texture2D" uid="uid://dyj6qfcehh6dd" path="res://Sprites/backgrounds/cage-singe.png" id="15_fcluc"]
+[ext_resource type="Texture2D" uid="uid://maj672ghsa1h" path="res://Sprites/items/banane.png" id="16_yr8a1"]
+[ext_resource type="Resource" uid="uid://b64fu1xswy1er" path="res://dialogues/singe_gorille.dialogue" id="17_i3p3a"]
+[ext_resource type="Texture2D" uid="uid://61mjs0t4iadq" path="res://Sprites/overworldCharacters/gorille-complet.png" id="18_dugv3"]
+[ext_resource type="Texture2D" uid="uid://bpwalujrgs283" path="res://Sprites/backgrounds/gate.png" id="19_a262j"]
+[ext_resource type="Resource" uid="uid://cg3120a5p8jp8" path="res://dialogues/singe_garde.dialogue" id="20_oeoa4"]
+[ext_resource type="Texture2D" uid="uid://c1m4r1mkk0dhw" path="res://Sprites/overworldCharacters/garde-complet.png" id="21_hljpm"]
+[ext_resource type="Texture2D" uid="uid://ct7ow06i2yqn2" path="res://Sprites/backgrounds/koi-pond.png" id="22_um5kw"]
+[ext_resource type="Texture2D" uid="uid://50yp6quvv00g" path="res://Sprites/items/lunettes.png" id="23_fdnfb"]
+[ext_resource type="Texture2D" uid="uid://bi68d6vn1bgjb" path="res://Sprites/backgrounds/pharmacie.png" id="24_kthhi"]
+[ext_resource type="Texture2D" uid="uid://omu2o1587wrk" path="res://Sprites/items/supplements.png" id="25_naaii"]
+[ext_resource type="Texture2D" uid="uid://c45ne1dplxtpu" path="res://Sprites/backgrounds/terrier-taupe.png" id="26_bi08a"]
+[ext_resource type="Texture2D" uid="uid://b2mnkgx1tuakl" path="res://Sprites/items/cle-enfouie.png" id="27_7j4f2"]
+[ext_resource type="Resource" uid="uid://b6honie1lr0gl" path="res://dialogues/singe_taupe.dialogue" id="28_o66rb"]
+[ext_resource type="Texture2D" uid="uid://c21p5xbf2y3f4" path="res://Sprites/overworldCharacters/taupe-complet.png" id="29_inmmo"]
+[ext_resource type="PackedScene" uid="uid://2jp27imlxhs3" path="res://user_interfaces/ShowInventory.tscn" id="30_2pufb"]
+[ext_resource type="PackedScene" uid="uid://qkgqubbya8m7" path="res://user_interfaces/pause_menu.tscn" id="31_p31dk"]
+[ext_resource type="PackedScene" uid="uid://cdbx020iv1acu" path="res://user_interfaces/monkey_and_gorilla_ending.tscn" id="32_r2nsl"]
+[ext_resource type="PackedScene" uid="uid://dwo1dj0aqlnyt" path="res://user_interfaces/bad_ending.tscn" id="33_bfshi"]
+[ext_resource type="PackedScene" uid="uid://c3fyh3ob7v2cc" path="res://user_interfaces/gorilla_ending.tscn" id="34_q6mnq"]
+[ext_resource type="PackedScene" uid="uid://da8lyr3jlnxhn" path="res://user_interfaces/monkey_ending.tscn" id="35_lejhl"]
+[ext_resource type="AudioStream" uid="uid://dhrmqx60gym46" path="res://musics/Music_Hub-Loop.ogg" id="36_whtfn"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8yqq3"]
 resource_local_to_scene = true
-texture = ExtResource("2_tohvn")
+texture = ExtResource("2_aymgc")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_uoj16"]
 resource_local_to_scene = true
-texture = ExtResource("4_5nvnw")
+texture = ExtResource("10_4rovs")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ah06v"]
 resource_local_to_scene = true
-texture = ExtResource("5_1xjj8")
+texture = ExtResource("15_fcluc")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_aqv3p"]
 resource_local_to_scene = true
-texture = ExtResource("6_0w5ee")
+texture = ExtResource("19_a262j")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6ng4c"]
 resource_local_to_scene = true
-texture = ExtResource("7_rooud")
+texture = ExtResource("22_um5kw")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1oih5"]
 resource_local_to_scene = true
-texture = ExtResource("8_k3ie1")
+texture = ExtResource("24_kthhi")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yk6rf"]
 resource_local_to_scene = true
-texture = ExtResource("9_qkscn")
+texture = ExtResource("26_bi08a")
 
 [node name="MainScene" type="Node2D" node_paths=PackedStringArray("scenes")]
-script = ExtResource("1_pkgwm")
+script = ExtResource("1_rnxxp")
 scenes = [NodePath("CanvasLayer/HubZoo"), NodePath("CanvasLayer/GiraffeEnclosure"), NodePath("CanvasLayer/ApeEnclosure"), NodePath("CanvasLayer/ExitGate"), NodePath("CanvasLayer/KoiPond"), NodePath("CanvasLayer/Pharmacy"), NodePath("CanvasLayer/BurrowTerrier")]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="HubZoo" type="Panel" parent="CanvasLayer"]
+visible = false
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -65,49 +81,66 @@ grow_vertical = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_8yqq3")
 
-[node name="MoveToGiraffe" parent="CanvasLayer/HubZoo" node_paths=PackedStringArray("areaNode", "containingArea") instance=ExtResource("4_bjyq2")]
+[node name="MoveToGiraffe" parent="CanvasLayer/HubZoo" node_paths=PackedStringArray("areaNode", "containingArea") instance=ExtResource("3_lel4f")]
+visible = false
 z_index = 5
 scale = Vector2(0.999999, 0.999999)
 areaNode = NodePath("../../GiraffeEnclosure")
 containingArea = NodePath("../../..")
 selectableAreaPolygon = PackedVector2Array(1560, 192, 1520, 600.001, 1561, 641.001, 1615, 659.001, 1681, 671.001, 1925, 646.001, 1929, 126, 1775, 133)
 
-[node name="MoveToKoi" parent="CanvasLayer/HubZoo" node_paths=PackedStringArray("areaNode", "containingArea") instance=ExtResource("4_bjyq2")]
+[node name="MoveToKoi" parent="CanvasLayer/HubZoo" node_paths=PackedStringArray("areaNode", "containingArea") instance=ExtResource("3_lel4f")]
+visible = false
 z_index = 5
 scale = Vector2(0.999999, 0.999999)
 areaNode = NodePath("../../KoiPond")
 containingArea = NodePath("../../..")
 selectableAreaPolygon = PackedVector2Array(879.001, 653.001, 708.001, 669.001, 555.001, 725.001, 533, 769.001, 544, 824.001, 688.001, 862.001, 918.001, 869.001, 1159, 858.001, 1312, 828.001, 1337, 796.001, 1332, 721.001, 1191, 668.001, 1022, 653.001)
 
-[node name="MoveToMonkey" parent="CanvasLayer/HubZoo" node_paths=PackedStringArray("areaNode", "containingArea") instance=ExtResource("4_bjyq2")]
+[node name="MoveToMonkey" parent="CanvasLayer/HubZoo" node_paths=PackedStringArray("areaNode", "containingArea") instance=ExtResource("3_lel4f")]
+visible = false
 z_index = 5
 scale = Vector2(0.999999, 0.999999)
 areaNode = NodePath("../../ApeEnclosure")
 containingArea = NodePath("../../..")
 selectableAreaPolygon = PackedVector2Array(-7.00001, 380, -5, 1085, 232, 1087, 393, 1001, 360, 453, 284, 414, 128, 389)
 
-[node name="MoveToBurrow" parent="CanvasLayer/HubZoo" node_paths=PackedStringArray("areaNode", "containingArea") instance=ExtResource("4_bjyq2")]
+[node name="MoveToBurrow" parent="CanvasLayer/HubZoo" node_paths=PackedStringArray("areaNode", "containingArea") instance=ExtResource("3_lel4f")]
+visible = false
 z_index = 4
 scale = Vector2(0.999999, 0.999999)
 areaNode = NodePath("../../BurrowTerrier")
 containingArea = NodePath("../../..")
 selectableAreaPolygon = PackedVector2Array(-17, 336, 419, 149, 537, 112, 699.001, 149, 717.001, 336, 287, 493, -21, 395)
 
-[node name="MoveToPharmacy" parent="CanvasLayer/HubZoo" node_paths=PackedStringArray("areaNode", "containingArea") instance=ExtResource("4_bjyq2")]
+[node name="MoveToPharmacyLocked" parent="CanvasLayer/HubZoo" instance=ExtResource("3_lel4f")]
+z_index = 4
+scale = Vector2(0.999999, 0.999999)
+script = ExtResource("4_t8qf2")
+dialogue_ressource_lock = ExtResource("5_8bj5l")
+dialogue_start_lock = "singe_porte_verouille"
+dialogue_ressource_unlock = ExtResource("6_vbcqk")
+dialogue_start_unlock = "singe_porte_deverouille"
+selectableAreaPolygon = PackedVector2Array(1159, 183, 1260, 103, 1481, 144, 1585, 226, 1576, 424, 1374, 525, 1155, 384)
+
+[node name="MoveToPharmacy" parent="CanvasLayer/HubZoo" node_paths=PackedStringArray("areaNode", "containingArea") instance=ExtResource("3_lel4f")]
+visible = false
 z_index = 4
 scale = Vector2(0.999999, 0.999999)
 areaNode = NodePath("../../Pharmacy")
 containingArea = NodePath("../../..")
+conditionToAllow = "hasUnlockDoor"
 selectableAreaPolygon = PackedVector2Array(1159, 183, 1260, 103, 1481, 144, 1585, 226, 1576, 424, 1374, 525, 1155, 384)
 
-[node name="MoveToExit" parent="CanvasLayer/HubZoo" node_paths=PackedStringArray("areaNode", "containingArea") instance=ExtResource("4_bjyq2")]
+[node name="MoveToExit" parent="CanvasLayer/HubZoo" node_paths=PackedStringArray("areaNode", "containingArea") instance=ExtResource("3_lel4f")]
+visible = false
 z_index = 3
 scale = Vector2(0.999999, 0.999999)
 areaNode = NodePath("../../ExitGate")
 containingArea = NodePath("../../..")
 selectableAreaPolygon = PackedVector2Array(1066, -1, 1333, 19, 1656, 94.0001, 1633, 215, 909.001, 324, 802.001, 311, 788.001, 131, 881.001, 35)
 
-[node name="Feuille" parent="CanvasLayer/HubZoo" node_paths=PackedStringArray("show_inventory", "item") instance=ExtResource("10_fiy5w")]
+[node name="Feuille" parent="CanvasLayer/HubZoo" node_paths=PackedStringArray("show_inventory", "item") instance=ExtResource("7_sf7s4")]
 z_index = 5
 position = Vector2(502, 528)
 rotation = 0.347321
@@ -116,9 +149,9 @@ item = NodePath("Feuille")
 imageScale = 0.3
 selectableAreaPolygon = PackedVector2Array(-5.76947, -27.6896, 40.7897, -25.4007, 62.1229, -7.59912, 34.059, 20.6394, -22.3414, 29.3575, -62.0421, 10.7603, -39.1987, -11.3344)
 
-[node name="Feuille" parent="CanvasLayer/HubZoo/Feuille" instance=ExtResource("11_7c7gj")]
+[node name="Feuille" parent="CanvasLayer/HubZoo/Feuille" instance=ExtResource("8_nt6cm")]
 itemName = "Feuille"
-itemImage = ExtResource("12_8n7qr")
+itemImage = ExtResource("9_xjaft")
 
 [node name="GiraffeEnclosure" type="Panel" parent="CanvasLayer"]
 visible = false
@@ -130,17 +163,28 @@ grow_vertical = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_uoj16")
 
-[node name="BackToHub" parent="CanvasLayer/GiraffeEnclosure" node_paths=PackedStringArray("areaNode", "containingArea") instance=ExtResource("4_bjyq2")]
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/GiraffeEnclosure"]
+visible = false
+position = Vector2(1689.09, 110.7)
+scale = Vector2(0.29, 0.25)
+texture = ExtResource("11_q0rxm")
+
+[node name="BackToHub" parent="CanvasLayer/GiraffeEnclosure/Sprite2D" node_paths=PackedStringArray("areaNode", "containingArea", "sprite") instance=ExtResource("3_lel4f")]
+visible = false
 z_index = 3
-scale = Vector2(0.872726, 0.872726)
-areaNode = NodePath("../../HubZoo")
-containingArea = NodePath("../../..")
+position = Vector2(-5824.45, -442.8)
+scale = Vector2(2.93103, 3.4)
+areaNode = NodePath("../../../HubZoo")
+containingArea = NodePath("../../../..")
+sprite = NodePath("..")
 selectableAreaPolygon = PackedVector2Array(1925, 75, 1925, 185, 2050, 185, 2050, 75)
 
-[node name="Giraffe" parent="CanvasLayer/GiraffeEnclosure" instance=ExtResource("17_tunkn")]
+[node name="Giraffe" parent="CanvasLayer/GiraffeEnclosure" instance=ExtResource("12_srf10")]
 z_index = 5
 position = Vector2(510, 491)
-image = ExtResource("9_hphbr")
+dialogue_ressource = ExtResource("13_xdrct")
+dialogue_start = "singe_giraffe"
+image = ExtResource("14_ya3dn")
 imageScale = 0.575
 highlightColor = Color(0.215686, 1, 1, 1)
 highlightOpacityRange = Vector2(0.2, 0.5)
@@ -148,7 +192,6 @@ highlightBlinkSpeed = 0.3
 selectableAreaPolygon = PackedVector2Array(110, 433, 123, -70, 318, -373, 229, -430, 160, -373, 177, -336, -91, -68, -232, -28, -279, 218, -144, 436)
 
 [node name="ApeEnclosure" type="Panel" parent="CanvasLayer"]
-visible = false
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -157,14 +200,24 @@ grow_vertical = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_ah06v")
 
-[node name="BackToHub" parent="CanvasLayer/ApeEnclosure" node_paths=PackedStringArray("areaNode", "containingArea") instance=ExtResource("4_bjyq2")]
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/ApeEnclosure"]
+visible = false
+position = Vector2(1689.09, 110.7)
+scale = Vector2(0.29, 0.25)
+texture = ExtResource("11_q0rxm")
+
+[node name="BackToHub" parent="CanvasLayer/ApeEnclosure/Sprite2D" node_paths=PackedStringArray("areaNode", "containingArea", "sprite") instance=ExtResource("3_lel4f")]
+visible = false
 z_index = 3
-scale = Vector2(0.90909, 0.90909)
-areaNode = NodePath("../../HubZoo")
-containingArea = NodePath("../../..")
+position = Vector2(-5824.45, -442.8)
+scale = Vector2(2.93103, 3.4)
+areaNode = NodePath("../../../HubZoo")
+containingArea = NodePath("../../../..")
+sprite = NodePath("..")
+conditionToAllow = "hasBrokenCage"
 selectableAreaPolygon = PackedVector2Array(1925, 75, 1925, 185, 2050, 185, 2050, 75)
 
-[node name="Banane" parent="CanvasLayer/ApeEnclosure" node_paths=PackedStringArray("show_inventory", "item") instance=ExtResource("10_fiy5w")]
+[node name="Banane" parent="CanvasLayer/ApeEnclosure" node_paths=PackedStringArray("show_inventory", "item") instance=ExtResource("7_sf7s4")]
 z_index = 5
 position = Vector2(1629, 276)
 rotation = -2.0752
@@ -174,14 +227,16 @@ item = NodePath("Banane")
 imageScale = 0.3
 selectableAreaPolygon = PackedVector2Array(52.1222, 25.5871, 68.4748, 25.5168, 40.0706, -23.8636, -24.3052, -23.957, -64.6437, -9.35471, -53.1069, 6.3566, -25.77, 14.0086)
 
-[node name="Banane" parent="CanvasLayer/ApeEnclosure/Banane" instance=ExtResource("11_7c7gj")]
+[node name="Banane" parent="CanvasLayer/ApeEnclosure/Banane" instance=ExtResource("8_nt6cm")]
 itemName = "Banane"
-itemImage = ExtResource("9_ope5j")
+itemImage = ExtResource("16_yr8a1")
 
-[node name="Gorilla" parent="CanvasLayer/ApeEnclosure" instance=ExtResource("17_tunkn")]
+[node name="Gorilla" parent="CanvasLayer/ApeEnclosure" instance=ExtResource("12_srf10")]
 z_index = 5
 position = Vector2(536, 558)
-image = ExtResource("12_r7vxo")
+dialogue_ressource = ExtResource("17_i3p3a")
+dialogue_start = "singe_gorille"
+image = ExtResource("18_dugv3")
 imageScale = 0.64
 highlightColor = Color(0.215686, 1, 1, 1)
 highlightOpacityRange = Vector2(0.2, 0.5)
@@ -198,12 +253,30 @@ grow_vertical = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_aqv3p")
 
-[node name="BackToHub" parent="CanvasLayer/ExitGate" node_paths=PackedStringArray("areaNode", "containingArea") instance=ExtResource("4_bjyq2")]
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/ExitGate"]
+visible = false
+position = Vector2(1689.09, 110.7)
+scale = Vector2(0.29, 0.25)
+texture = ExtResource("11_q0rxm")
+
+[node name="BackToHub" parent="CanvasLayer/ExitGate/Sprite2D" node_paths=PackedStringArray("areaNode", "containingArea", "sprite") instance=ExtResource("3_lel4f")]
+visible = false
 z_index = 3
-scale = Vector2(0.927272, 0.927272)
-areaNode = NodePath("../../HubZoo")
-containingArea = NodePath("../../..")
+position = Vector2(-5824.45, -442.8)
+scale = Vector2(2.93103, 3.4)
+areaNode = NodePath("../../../HubZoo")
+containingArea = NodePath("../../../..")
+sprite = NodePath("..")
 selectableAreaPolygon = PackedVector2Array(1925, 75, 1925, 185, 2050, 185, 2050, 75)
+
+[node name="DialogueTrigger" parent="CanvasLayer/ExitGate" instance=ExtResource("12_srf10")]
+position = Vector2(971, 589)
+scale = Vector2(1.1, 0.873)
+dialogue_ressource = ExtResource("20_oeoa4")
+dialogue_start = "singe_garde"
+image = ExtResource("21_hljpm")
+imageScale = 0.5
+selectableAreaPolygon = PackedVector2Array(-37.2727, -98.5109, -56.3636, -225.659, -160.909, -152.348, -295.455, -342.497, -291.818, -422.68, -324.545, -483.391, -298.182, -506.3, -142.727, -388.316, -140.909, -305.842, -34.5455, -363.116, -70.9091, -501.718, 77.2727, -563.574, 157.273, -470.79, 116.364, -365.407, 308.182, -193.585, 247.273, 30.9279, 196.364, 28.6369, 330.909, 514.318, 201.818, 534.937, 60.9091, 97.3654, -14.5455, 187.858, 47.2727, 452.463, -16.3636, 526.919, -116.364, 508.591, -91.8182, 436.426, -159.091, 151.203)
 
 [node name="KoiPond" type="Panel" parent="CanvasLayer"]
 visible = false
@@ -215,26 +288,35 @@ grow_vertical = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_6ng4c")
 
-[node name="BackToHub" parent="CanvasLayer/KoiPond" node_paths=PackedStringArray("areaNode", "containingArea") instance=ExtResource("4_bjyq2")]
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/KoiPond"]
+visible = false
+position = Vector2(1689.09, 110.7)
+scale = Vector2(0.29, 0.25)
+texture = ExtResource("11_q0rxm")
+
+[node name="BackToHub" parent="CanvasLayer/KoiPond/Sprite2D" node_paths=PackedStringArray("areaNode", "containingArea", "sprite") instance=ExtResource("3_lel4f")]
+visible = false
 z_index = 3
-scale = Vector2(0.763636, 0.763636)
-areaNode = NodePath("../../HubZoo")
-containingArea = NodePath("../../..")
+position = Vector2(-5824.45, -442.8)
+scale = Vector2(2.93103, 3.4)
+areaNode = NodePath("../../../HubZoo")
+containingArea = NodePath("../../../..")
+sprite = NodePath("..")
 selectableAreaPolygon = PackedVector2Array(1925, 75, 1925, 185, 2050, 185, 2050, 75)
 
-[node name="LunettesDeSoleil" parent="CanvasLayer/KoiPond" node_paths=PackedStringArray("show_inventory", "item") instance=ExtResource("10_fiy5w")]
+[node name="Lunettes" parent="CanvasLayer/KoiPond" node_paths=PackedStringArray("show_inventory", "item") instance=ExtResource("7_sf7s4")]
 z_index = 5
 position = Vector2(82.0001, 589)
 rotation = -0.310669
 scale = Vector2(0.694214, 0.694214)
 show_inventory = NodePath("../../ShowInventory")
-item = NodePath("LunettesDeSoleil")
+item = NodePath("Lunettes")
 imageScale = 0.46
 selectableAreaPolygon = PackedVector2Array(24.6507, 45.737, 87.6763, 19.0723, 77.3829, -5.41321, -4.95891, -36.389, -70.879, -24.2697, -76.8924, 8.59637)
 
-[node name="LunettesDeSoleil" parent="CanvasLayer/KoiPond/LunettesDeSoleil" instance=ExtResource("11_7c7gj")]
+[node name="Lunettes" parent="CanvasLayer/KoiPond/Lunettes" instance=ExtResource("8_nt6cm")]
 itemName = "Lunettes de soleil"
-itemImage = ExtResource("12_el6wr")
+itemImage = ExtResource("23_fdnfb")
 
 [node name="Pharmacy" type="Panel" parent="CanvasLayer"]
 visible = false
@@ -246,14 +328,23 @@ grow_vertical = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_1oih5")
 
-[node name="BackToHub" parent="CanvasLayer/Pharmacy" node_paths=PackedStringArray("areaNode", "containingArea") instance=ExtResource("4_bjyq2")]
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/Pharmacy"]
+visible = false
+position = Vector2(1689.09, 110.7)
+scale = Vector2(0.29, 0.25)
+texture = ExtResource("11_q0rxm")
+
+[node name="BackToHub" parent="CanvasLayer/Pharmacy/Sprite2D" node_paths=PackedStringArray("areaNode", "containingArea", "sprite") instance=ExtResource("3_lel4f")]
+visible = false
 z_index = 3
-scale = Vector2(0.854545, 0.854545)
-areaNode = NodePath("../../HubZoo")
-containingArea = NodePath("../../..")
+position = Vector2(-5824.45, -442.8)
+scale = Vector2(2.93103, 3.4)
+areaNode = NodePath("../../../HubZoo")
+containingArea = NodePath("../../../..")
+sprite = NodePath("..")
 selectableAreaPolygon = PackedVector2Array(1925, 75, 1925, 185, 2050, 185, 2050, 75)
 
-[node name="Supplements" parent="CanvasLayer/Pharmacy" node_paths=PackedStringArray("show_inventory", "item") instance=ExtResource("10_fiy5w")]
+[node name="Supplements" parent="CanvasLayer/Pharmacy" node_paths=PackedStringArray("show_inventory", "item") instance=ExtResource("7_sf7s4")]
 z_index = 5
 position = Vector2(323, 278)
 rotation = -0.102974
@@ -263,9 +354,9 @@ item = NodePath("Supplements")
 imageScale = 0.3
 selectableAreaPolygon = PackedVector2Array(26.1932, 45.8715, 29.3694, -44.0981, -41.7712, -38.1367, -45.5792, 55.2534)
 
-[node name="Supplements" parent="CanvasLayer/Pharmacy/Supplements" instance=ExtResource("11_7c7gj")]
+[node name="Supplements" parent="CanvasLayer/Pharmacy/Supplements" instance=ExtResource("8_nt6cm")]
 itemName = "Supplements"
-itemImage = ExtResource("14_t5mqh")
+itemImage = ExtResource("25_naaii")
 
 [node name="BurrowTerrier" type="Panel" parent="CanvasLayer"]
 visible = false
@@ -277,14 +368,23 @@ grow_vertical = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_yk6rf")
 
-[node name="BackToHub" parent="CanvasLayer/BurrowTerrier" node_paths=PackedStringArray("areaNode", "containingArea") instance=ExtResource("4_bjyq2")]
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/BurrowTerrier"]
+visible = false
+position = Vector2(1689.09, 110.7)
+scale = Vector2(0.29, 0.25)
+texture = ExtResource("11_q0rxm")
+
+[node name="BackToHub" parent="CanvasLayer/BurrowTerrier/Sprite2D" node_paths=PackedStringArray("areaNode", "containingArea", "sprite") instance=ExtResource("3_lel4f")]
+visible = false
 z_index = 3
-scale = Vector2(0.818181, 0.818181)
-areaNode = NodePath("../../HubZoo")
-containingArea = NodePath("../../..")
+position = Vector2(-5824.45, -442.8)
+scale = Vector2(2.93103, 3.4)
+areaNode = NodePath("../../../HubZoo")
+containingArea = NodePath("../../../..")
+sprite = NodePath("..")
 selectableAreaPolygon = PackedVector2Array(1925, 75, 1925, 185, 2050, 185, 2050, 75)
 
-[node name="Clef" parent="CanvasLayer/BurrowTerrier" node_paths=PackedStringArray("show_inventory", "item") instance=ExtResource("10_fiy5w")]
+[node name="Clef" parent="CanvasLayer/BurrowTerrier" node_paths=PackedStringArray("show_inventory", "item") instance=ExtResource("7_sf7s4")]
 z_index = 5
 position = Vector2(245, 914)
 rotation = 0.125664
@@ -294,11 +394,39 @@ item = NodePath("Clef")
 imageScale = 0.3
 selectableAreaPolygon = PackedVector2Array(57.9115, 40.7643, -64.2773, 54.9834, 38.3983, -24.0361)
 
-[node name="Clef" parent="CanvasLayer/BurrowTerrier/Clef" instance=ExtResource("11_7c7gj")]
-itemName = "Banane"
-itemImage = ExtResource("15_42mth")
+[node name="Clef" parent="CanvasLayer/BurrowTerrier/Clef" instance=ExtResource("8_nt6cm")]
+itemName = "Clef"
+itemImage = ExtResource("27_7j4f2")
 
-[node name="PauseMenu" parent="CanvasLayer" instance=ExtResource("11_vk54y")]
+[node name="DialogueTrigger" parent="CanvasLayer/BurrowTerrier" instance=ExtResource("12_srf10")]
+position = Vector2(936, 577)
+dialogue_ressource = ExtResource("28_o66rb")
+dialogue_start = "singe_taupe"
+image = ExtResource("29_inmmo")
+selectableAreaPolygon = PackedVector2Array(83, -68, 181, -9, 179, 25, 126, 42, -3, 66, -184, 2, -173, -58, 1, -74)
+
+[node name="ShowInventory" parent="CanvasLayer" instance=ExtResource("30_2pufb")]
+
+[node name="PauseMenu" parent="CanvasLayer" instance=ExtResource("31_p31dk")]
+visible = false
+z_index = 6
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+
+[node name="MonkeyAndGorillaEnding" parent="CanvasLayer2" instance=ExtResource("32_r2nsl")]
+unique_name_in_owner = true
 visible = false
 
-[node name="ShowInventory" parent="CanvasLayer" instance=ExtResource("10_fu01j")]
+[node name="BadEnding" parent="CanvasLayer2" instance=ExtResource("33_bfshi")]
+visible = false
+
+[node name="GorillaEnding" parent="CanvasLayer2" instance=ExtResource("34_q6mnq")]
+visible = false
+
+[node name="MonkeyEnding" parent="CanvasLayer2" instance=ExtResource("35_lejhl")]
+visible = false
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("36_whtfn")
+autoplay = true
+parameters/looping = true

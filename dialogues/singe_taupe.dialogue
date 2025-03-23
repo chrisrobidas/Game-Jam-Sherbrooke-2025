@@ -1,11 +1,30 @@
-~ this_is_a_node_title
-Nathan: [[Hi|Hello|Howdy]], this is some dialogue.
-Nathan: Here are some choices.
-- First one
-	Nathan: You picked the first one.
-- Second one
-	Nathan: You picked the second one.
-- Start again => this_is_a_node_title
-- End the conversation => END
-Nathan: For more information see the online documentation.
+~ singe_taupe
+if PlayerGameState.hasAcceptedToHelpTaupe and "Lunettes de soleil" in PlayerInventory.item_names:
+	singe-heureux: Nous avons retrouvé tes lunettes!
+	taupe-lunettes: Merci beaucoup à vous deux. Je vois beaucoup mieux maintenant.
+	gorille-heureux: Allons-y!
+	taupe-lunettes: Oui c'est parti!
+	do PlayerInventory.UseItemByName("Lunettes de soleil")
+	do PlayerGameState.show_monkey_and_gorilla_ending()
+else:
+	singe-heureux: Bonjour!
+	taupe-neutre: Hein quoi qui est là?
+	~ singe_taupe_choix
+	singe-neutre: mmm...
+	- Tu ne me vois pas?
+		singe-heureux: Je suis singe, tu est aveugle?
+		taupe-neutre: Mais non franchement j'ai simplement une très mauvaise vision...
+		=> singe_taupe_choix
+	- Pourquoi es-tu dans le sol?
+		singe-heureux: Pourquoi es-tu dans le sol?
+		taupe-neutre: Je suis une taupe! Nous vivons dans le sol, d'ailleurs nous sommes des experts pour creuser des trous!
+		set PlayerGameState.hasOnceTalkedToTaupe = true
+		=> singe_taupe_choix
+	- Tu pourrais me creuse un tunnel? [if PlayerGameState.hasOnceTalkedToTaupe]
+		singe-heureux: Tu pourrais creuser un tunnel pour moi?
+		gorille-fache: Hey pour moi aussi!!!
+		taupe-neutre: Bien sûr, cependant je ne vois pas très bien, c'est difficile pour moi de travailler sans mes lunettes. Je les ais égarées...
+		singe-neutre: D'accord, nous allons tenter de les retrouver.
+		set PlayerGameState.hasAcceptedToHelpTaupe = true
+	- Laisse tomber => END
 => END

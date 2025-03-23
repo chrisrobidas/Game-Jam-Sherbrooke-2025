@@ -1,21 +1,22 @@
-[gd_scene load_steps=11 format=3 uid="uid://cchx81jhytq5v"]
+[gd_scene load_steps=12 format=3 uid="uid://cchx81jhytq5v"]
 
-[ext_resource type="Texture2D" uid="uid://bhq0spg5enkg3" path="res://Sprites/environments/hub-zoo.png" id="1_mmega"]
-[ext_resource type="FontFile" uid="uid://vlkshjxq24pw" path="res://fonts/Coffe Break.otf" id="1_pmxgl"]
-[ext_resource type="Texture2D" uid="uid://c6yctw8fjtuag" path="res://Sprites/menus/menu_button_hover.png" id="2_7aunm"]
-[ext_resource type="Texture2D" uid="uid://t1gwjckj78xw" path="res://Sprites/menus/menu_button.png" id="3_lb7sl"]
-[ext_resource type="Script" path="res://Scripts/menus/main_menu.gd" id="4_bug83"]
-[ext_resource type="AudioStream" uid="uid://dhrmqx60gym46" path="res://musics/Music_Hub-Loop.ogg" id="5_relw5"]
-[ext_resource type="AudioStream" uid="uid://kskn8n0rxxnb" path="res://sfxs/SFX_Click.wav" id="6_wpu3y"]
+[ext_resource type="Texture2D" uid="uid://bhq0spg5enkg3" path="res://Sprites/environments/hub-zoo.png" id="1_oo1ow"]
+[ext_resource type="Texture2D" uid="uid://bdts06mmu8p6j" path="res://Sprites/logo.png" id="2_xedyr"]
+[ext_resource type="FontFile" uid="uid://vlkshjxq24pw" path="res://fonts/Coffe Break.otf" id="3_youuw"]
+[ext_resource type="Texture2D" uid="uid://c6yctw8fjtuag" path="res://Sprites/menus/menu_button_hover.png" id="4_2wqvp"]
+[ext_resource type="Texture2D" uid="uid://t1gwjckj78xw" path="res://Sprites/menus/menu_button.png" id="5_6i0cj"]
+[ext_resource type="Script" path="res://Scripts/menus/main_menu.gd" id="6_wjg67"]
+[ext_resource type="AudioStream" uid="uid://kskn8n0rxxnb" path="res://sfxs/SFX_Click.wav" id="7_phmuv"]
+[ext_resource type="AudioStream" uid="uid://dhrmqx60gym46" path="res://musics/Music_Hub-Loop.ogg" id="8_8kinn"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_uxfbl"]
-texture = ExtResource("1_mmega")
+texture = ExtResource("1_oo1ow")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dku11"]
-texture = ExtResource("2_7aunm")
+texture = ExtResource("4_2wqvp")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tv4tj"]
-texture = ExtResource("3_lb7sl")
+texture = ExtResource("5_6i0cj")
 
 [node name="MainMenu" type="Node2D"]
 
@@ -48,13 +49,13 @@ grow_horizontal = 2
 grow_vertical = 2
 alignment = 1
 
-[node name="TitleLabel" type="Label" parent="CanvasLayer/Panel/Panel/VBoxContainer"]
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Panel/Panel/VBoxContainer"]
+custom_minimum_size = Vector2(685, 382)
 layout_mode = 2
 size_flags_horizontal = 4
-theme_override_colors/font_color = Color(1, 0.976471, 0.309804, 1)
-theme_override_fonts/font = ExtResource("1_pmxgl")
-theme_override_font_sizes/font_size = 108
-text = "La Grande Évasion du Zoo"
+size_flags_vertical = 4
+texture = ExtResource("2_xedyr")
+expand_mode = 1
 
 [node name="Margin" type="Control" parent="CanvasLayer/Panel/Panel/VBoxContainer"]
 custom_minimum_size = Vector2(0, 70)
@@ -64,7 +65,7 @@ layout_mode = 2
 custom_minimum_size = Vector2(500, 100)
 layout_mode = 2
 size_flags_horizontal = 4
-theme_override_fonts/font = ExtResource("1_pmxgl")
+theme_override_fonts/font = ExtResource("3_youuw")
 theme_override_font_sizes/font_size = 56
 theme_override_styles/focus = SubResource("StyleBoxTexture_dku11")
 theme_override_styles/disabled_mirrored = SubResource("StyleBoxTexture_dku11")
@@ -87,7 +88,7 @@ layout_mode = 2
 custom_minimum_size = Vector2(500, 100)
 layout_mode = 2
 size_flags_horizontal = 4
-theme_override_fonts/font = ExtResource("1_pmxgl")
+theme_override_fonts/font = ExtResource("3_youuw")
 theme_override_font_sizes/font_size = 56
 theme_override_styles/focus = SubResource("StyleBoxTexture_dku11")
 theme_override_styles/disabled_mirrored = SubResource("StyleBoxTexture_dku11")
@@ -107,14 +108,14 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
-script = ExtResource("4_bug83")
+script = ExtResource("6_wjg67")
 
 [node name="ButtonPressedSound" type="AudioStreamPlayer" parent="MainMenuManager"]
 unique_name_in_owner = true
-stream = ExtResource("6_wpu3y")
+stream = ExtResource("7_phmuv")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("5_relw5")
+stream = ExtResource("8_8kinn")
 autoplay = true
 parameters/looping = true
 

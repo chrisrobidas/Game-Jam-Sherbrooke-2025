@@ -1,15 +1,12 @@
-[gd_scene load_steps=9 format=3 uid="uid://c7g16acc6oeem"]
+[gd_scene load_steps=8 format=3 uid="uid://c7g16acc6oeem"]
 
-[ext_resource type="PackedScene" uid="uid://b354i0ylclgto" path="res://Scenes/Interactables/DialogueTrigger.tscn" id="1_2xuvu"]
+[ext_resource type="PackedScene" uid="uid://bfqet8c65sv6m" path="res://scenes/Interactables/DialogueTrigger.tscn" id="1_2xuvu"]
 [ext_resource type="Resource" uid="uid://cs55tomugxnfv" path="res://dialogues/singe_koi.dialogue" id="2_mvtp4"]
 [ext_resource type="PackedScene" uid="uid://qkgqubbya8m7" path="res://user_interfaces/pause_menu.tscn" id="3_j3vdt"]
-[ext_resource type="PackedScene" uid="uid://iyae0o3nug2t" path="res://Scenes/Interactables/Collectable.tscn" id="4_tjc4t"]
-[ext_resource type="PackedScene" uid="uid://jgi5dj08advr" path="res://Scenes/Inventory/LunettesDeSoleil.tscn" id="5_wpxi4"]
+[ext_resource type="PackedScene" uid="uid://iyae0o3nug2t" path="res://scenes/Interactables/Collectable.tscn" id="4_tjc4t"]
+[ext_resource type="PackedScene" uid="uid://jgi5dj08advr" path="res://scenes/Inventory/LunettesDeSoleil.tscn" id="5_wpxi4"]
 [ext_resource type="Texture2D" uid="uid://mbiiq51syscb" path="res://Sprites/Sunglasses.png" id="6_u1qe2"]
-[ext_resource type="PackedScene" uid="uid://xlkdk0hqyrf0" path="res://user_interfaces/ShowInventory.tscn" id="7_qqvsl"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_7itjp"]
-size = Vector2(50, 50)
+[ext_resource type="PackedScene" uid="uid://2jp27imlxhs3" path="res://user_interfaces/ShowInventory.tscn" id="7_qqvsl"]
 
 [node name="DialogueTestLevel" type="Node2D"]
 
@@ -28,7 +25,6 @@ position = Vector2(700, 135)
 show_inventory = NodePath("../ShowInventory")
 item = NodePath("Banane")
 imageScale = 2.0
-selectableAreaShape = SubResource("RectangleShape2D_7itjp")
 
 [node name="Banane" parent="Collectable" instance=ExtResource("5_wpxi4")]
 itemName = "Banane"

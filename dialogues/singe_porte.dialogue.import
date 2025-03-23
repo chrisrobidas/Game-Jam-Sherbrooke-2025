@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://b46rc7idyivyi"
+path="res://.godot/imported/singe_porte.dialogue-b257766ff93b50a6b02692ccc2504baa.tres"
+
+[deps]
+
+source_file="res://dialogues/singe_porte.dialogue"
+dest_files=["res://.godot/imported/singe_porte.dialogue-b257766ff93b50a6b02692ccc2504baa.tres"]
+
+[params]
+
+defaults=true

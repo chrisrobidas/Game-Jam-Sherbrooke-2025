@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://b5ccganrvq1sl"
+path="res://.godot/imported/singe_porte_deverouille.dialogue-252ed13b50a444a40f012375a3254686.tres"
+
+[deps]
+
+source_file="res://dialogues/singe_porte_deverouille.dialogue"
+dest_files=["res://.godot/imported/singe_porte_deverouille.dialogue-252ed13b50a444a40f012375a3254686.tres"]
+
+[params]
+
+defaults=true

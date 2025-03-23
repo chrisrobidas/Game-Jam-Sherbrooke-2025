@@ -9,3 +9,7 @@ func MoveToNewArea(newArea: CanvasItem) -> void:
 		scene.visible = false
 	newArea.visible = true
 	move_sound.play()
+
+func disable_all_scenes():
+	for scene in scenes:
+		scene.visible = false

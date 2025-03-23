@@ -116,6 +116,7 @@ stream = ExtResource("7_phmuv")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("8_8kinn")
+volume_db = -10.0
 autoplay = true
 parameters/looping = true
 

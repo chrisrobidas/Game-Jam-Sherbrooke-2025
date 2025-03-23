@@ -1,16 +1,19 @@
 [gd_scene load_steps=4 format=3 uid="uid://iyae0o3nug2t"]
 
 [ext_resource type="Script" path="res://Scripts/Collectable.gd" id="1_aq32w"]
-[ext_resource type="Shader" path="res://Shaders/Hover.gdshader" id="2_c1h7l"]
+[ext_resource type="Shader" path="res://Shaders/BlinkingHighlight.gdshader" id="2_tpm4s"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_qbfi1"]
-shader = ExtResource("2_c1h7l")
-shader_parameter/isHovered = false
+shader = ExtResource("2_tpm4s")
+shader_parameter/highlightColor = Color(0.215686, 1, 1, 1)
+shader_parameter/highlightOpacityRange = Vector2(0.2, 0.7)
+shader_parameter/highlightBlinkSpeed = 0.3
+shader_parameter/isHovered = true
 
 [node name="Collectable" type="Area2D"]
 script = ExtResource("1_aq32w")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 3

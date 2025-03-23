@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://chvimoj6pow03"]
+
+[ext_resource type="Script" path="res://Scripts/AreaMove.gd" id="1_630j8"]
+[ext_resource type="Shader" path="res://Shaders/BlinkingHighlight.gdshader" id="2_lumbu"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_gr165"]
+resource_local_to_scene = true
+shader = ExtResource("2_lumbu")
+shader_parameter/highlightColor = Color(0.243137, 0.756863, 0.792157, 1)
+shader_parameter/highlightOpacityRange = Vector2(0.2, 0.5)
+shader_parameter/highlightBlinkSpeed = 0.3
+shader_parameter/isHovered = false
+
+[node name="AreaMove" type="Area2D"]
+script = ExtResource("1_630j8")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+
+[node name="Sprite2D" type="Polygon2D" parent="."]
+material = SubResource("ShaderMaterial_gr165")

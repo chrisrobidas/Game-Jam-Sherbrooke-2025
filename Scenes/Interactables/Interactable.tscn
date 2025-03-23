@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://dxjkypukxc8i3"]
 
 [ext_resource type="Script" path="res://Scripts/Interactable.gd" id="1_cu8j4"]
-[ext_resource type="Shader" path="res://Shaders/Hover.gdshader" id="3_hpwfv"]
+[ext_resource type="Shader" path="res://Shaders/Inverse.gdshader" id="3_hpwfv"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_0j4ff"]
 shader = ExtResource("3_hpwfv")
@@ -10,7 +10,7 @@ shader_parameter/isHovered = false
 [node name="Interactable" type="Area2D"]
 script = ExtResource("1_cu8j4")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 3

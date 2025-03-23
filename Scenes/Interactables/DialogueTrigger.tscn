@@ -1,14 +1,13 @@
-[gd_scene load_steps=5 format=3 uid="uid://bfqet8c65sv6m"]
+[gd_scene load_steps=4 format=3 uid="uid://bfqet8c65sv6m"]
 
 [ext_resource type="Script" path="res://Scripts/DialogueTrigger.gd" id="1_uitpr"]
-[ext_resource type="Shader" path="res://Shaders/BlinkingHighlight.gdshader" id="2_abrra"]
-[ext_resource type="Texture2D" uid="uid://uwixha12pprl" path="res://Sprites/Brick.png" id="3_83bb2"]
+[ext_resource type="Shader" path="res://Shaders/ItemBlinkingHighlight.gdshader" id="2_2dhh3"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_h0pkx"]
-shader = ExtResource("2_abrra")
-shader_parameter/highlightColor = Color(1, 1, 1, 1)
+shader = ExtResource("2_2dhh3")
+shader_parameter/highlightColor = Color(0.215686, 1, 1, 1)
 shader_parameter/highlightOpacityRange = Vector2(0.2, 0.5)
-shader_parameter/highlightBlinkSpeed = 1.0
+shader_parameter/highlightBlinkSpeed = 0.3
 shader_parameter/isHovered = false
 
 [node name="DialogueTrigger" type="Area2D"]
@@ -17,11 +16,6 @@ script = ExtResource("1_uitpr")
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture_filter = 3
-texture_repeat = 2
 material = SubResource("ShaderMaterial_h0pkx")
 position = Vector2(1, 3.45707e-06)
-scale = Vector2(13.1875, 6.5625)
-texture = ExtResource("3_83bb2")
-region_enabled = true
 region_rect = Rect2(20, 5, 32, 32)

@@ -14,7 +14,6 @@ class_name Highlightable extends Interactable
 	set(newHighlightBlinkSpeed):
 		highlightBlinkSpeed = newHighlightBlinkSpeed
 		$Sprite2D.material.set_shader_parameter("highlightBlinkSpeed", highlightBlinkSpeed)
-		
+
 func _ready() -> void:
 	super._ready()
-	$Sprite2D.set_polygon(selectableAreaPolygon)

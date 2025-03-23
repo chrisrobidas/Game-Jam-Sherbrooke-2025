@@ -1,6 +1,6 @@
 class_name AreaMove extends Highlightable
 
-@export var areaNode: Node2D
+@export var areaNode: CanvasItem
 @export var containingArea: Mainscene
 
 func Interact() -> void:

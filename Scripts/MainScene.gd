@@ -1,8 +1,8 @@
 class_name Mainscene extends Node2D
 
-@export var scenes: Array[Node2D] = []
+@export var scenes: Array[CanvasItem] = []
 
-func MoveToNewArea(newArea: Node2D) -> void:
+func MoveToNewArea(newArea: CanvasItem) -> void:
 	for scene in scenes:
 		scene.visible = false
 	newArea.visible = true

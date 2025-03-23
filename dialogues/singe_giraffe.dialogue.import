@@ -1,0 +1,14 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://f58i1asjx1i3"
+valid=false
+
+[deps]
+
+source_file="res://dialogues/singe_giraffe.dialogue"
+
+[params]
+
+defaults=true

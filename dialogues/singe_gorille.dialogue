@@ -1,4 +1,4 @@
-~ singe_gorille_rencontre
+~ singe_gorille
 
 if PlayerGameState.hasBrokenCage:
 	gorille-neutre: Mais qu'est-ce qu'on attend? On y va!

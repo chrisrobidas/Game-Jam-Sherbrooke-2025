@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://cs55tomugxnfv"
+path="res://.godot/imported/singe_koi.dialogue-358d4983526c5de2e540a3a493982932.tres"
+
+[deps]
+
+source_file="res://dialogues/singe_koi.dialogue"
+dest_files=["res://.godot/imported/singe_koi.dialogue-358d4983526c5de2e540a3a493982932.tres"]
+
+[params]
+
+defaults=true

@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://cg3120a5p8jp8"
+path="res://.godot/imported/singe_garde.dialogue-911854f22e762ffa014d0c5297fd4f21.tres"
+
+[deps]
+
+source_file="res://dialogues/singe_garde.dialogue"
+dest_files=["res://.godot/imported/singe_garde.dialogue-911854f22e762ffa014d0c5297fd4f21.tres"]
+
+[params]
+
+defaults=true

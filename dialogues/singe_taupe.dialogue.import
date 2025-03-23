@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://b6honie1lr0gl"
+path="res://.godot/imported/singe_taupe.dialogue-1bdc257e6f9c6f2111e4c4ac3ded4604.tres"
+
+[deps]
+
+source_file="res://dialogues/singe_taupe.dialogue"
+dest_files=["res://.godot/imported/singe_taupe.dialogue-1bdc257e6f9c6f2111e4c4ac3ded4604.tres"]
+
+[params]
+
+defaults=true

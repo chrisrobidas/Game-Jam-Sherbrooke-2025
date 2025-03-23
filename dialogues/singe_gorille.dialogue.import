@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://b64fu1xswy1er"
+path="res://.godot/imported/singe_gorille.dialogue-1c1a6a8d7422e101fcc89a5c6bc63648.tres"
+
+[deps]
+
+source_file="res://dialogues/singe_gorille.dialogue"
+dest_files=["res://.godot/imported/singe_gorille.dialogue-1c1a6a8d7422e101fcc89a5c6bc63648.tres"]
+
+[params]
+
+defaults=true

@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=3 uid="uid://dxci74ilmdpkw"]
+[gd_scene load_steps=56 format=3 uid="uid://dxci74ilmdpkw"]
 
 [ext_resource type="Script" path="res://Scripts/MainScene.gd" id="1_rnxxp"]
 [ext_resource type="Texture2D" uid="uid://dakk7uxe5itja" path="res://Sprites/backgrounds/hub-zoo.png" id="2_aymgc"]
@@ -10,32 +10,44 @@
 [ext_resource type="PackedScene" uid="uid://cdnuh4k2dg714" path="res://scenes/Inventory/InventoryItem.tscn" id="8_nt6cm"]
 [ext_resource type="Texture2D" uid="uid://cma6emotjbj25" path="res://Sprites/items/feuille.png" id="9_xjaft"]
 [ext_resource type="Texture2D" uid="uid://bvpnpbr4rsytj" path="res://Sprites/backgrounds/enclos-girafe.png" id="10_4rovs"]
+[ext_resource type="AudioStream" uid="uid://2k83utt11btr" path="res://musics/Music_Hub-Radio.ogg" id="10_n0lp1"]
 [ext_resource type="Texture2D" uid="uid://bn33yxly5w7nn" path="res://Sprites/menus/Back.png" id="11_q0rxm"]
+[ext_resource type="Script" path="res://Scripts/music.gd" id="11_qb41c"]
 [ext_resource type="PackedScene" uid="uid://bfqet8c65sv6m" path="res://scenes/Interactables/DialogueTrigger.tscn" id="12_srf10"]
 [ext_resource type="Resource" uid="uid://f58i1asjx1i3" path="res://dialogues/singe_giraffe.dialogue" id="13_xdrct"]
 [ext_resource type="Texture2D" uid="uid://bvd0rbg4o57me" path="res://Sprites/overworldCharacters/girafe-complete.png" id="14_ya3dn"]
 [ext_resource type="Texture2D" uid="uid://dyj6qfcehh6dd" path="res://Sprites/backgrounds/cage-singe.png" id="15_fcluc"]
 [ext_resource type="Texture2D" uid="uid://maj672ghsa1h" path="res://Sprites/items/banane.png" id="16_yr8a1"]
+[ext_resource type="AudioStream" uid="uid://tsbrfp6t5i4b" path="res://musics/Music_4-loop.ogg" id="17_hdgib"]
 [ext_resource type="Resource" uid="uid://b64fu1xswy1er" path="res://dialogues/singe_gorille.dialogue" id="17_i3p3a"]
 [ext_resource type="Texture2D" uid="uid://61mjs0t4iadq" path="res://Sprites/overworldCharacters/gorille-complet.png" id="18_dugv3"]
 [ext_resource type="Texture2D" uid="uid://bpwalujrgs283" path="res://Sprites/backgrounds/gate.png" id="19_a262j"]
 [ext_resource type="Resource" uid="uid://cg3120a5p8jp8" path="res://dialogues/singe_garde.dialogue" id="20_oeoa4"]
 [ext_resource type="Texture2D" uid="uid://c1m4r1mkk0dhw" path="res://Sprites/overworldCharacters/garde-complet.png" id="21_hljpm"]
+[ext_resource type="AudioStream" uid="uid://wghvapsy5wll" path="res://musics/Music_3-loop.ogg" id="22_5stp1"]
 [ext_resource type="Texture2D" uid="uid://ct7ow06i2yqn2" path="res://Sprites/backgrounds/koi-pond.png" id="22_um5kw"]
 [ext_resource type="Texture2D" uid="uid://50yp6quvv00g" path="res://Sprites/items/lunettes.png" id="23_fdnfb"]
 [ext_resource type="Texture2D" uid="uid://bi68d6vn1bgjb" path="res://Sprites/backgrounds/pharmacie.png" id="24_kthhi"]
 [ext_resource type="Texture2D" uid="uid://omu2o1587wrk" path="res://Sprites/items/supplements.png" id="25_naaii"]
+[ext_resource type="AudioStream" uid="uid://2v43uwv1cllb" path="res://musics/Ambiance_Zoo-Loop.ogg" id="26_15psl"]
 [ext_resource type="Texture2D" uid="uid://c45ne1dplxtpu" path="res://Sprites/backgrounds/terrier-taupe.png" id="26_bi08a"]
 [ext_resource type="Texture2D" uid="uid://b2mnkgx1tuakl" path="res://Sprites/items/cle-enfouie.png" id="27_7j4f2"]
 [ext_resource type="Resource" uid="uid://b6honie1lr0gl" path="res://dialogues/singe_taupe.dialogue" id="28_o66rb"]
 [ext_resource type="Texture2D" uid="uid://c21p5xbf2y3f4" path="res://Sprites/overworldCharacters/taupe-complet.png" id="29_inmmo"]
+[ext_resource type="AudioStream" uid="uid://cuus0frb4g2lf" path="res://musics/Music_2-loop.ogg" id="29_iwmej"]
 [ext_resource type="PackedScene" uid="uid://2jp27imlxhs3" path="res://user_interfaces/ShowInventory.tscn" id="30_2pufb"]
+[ext_resource type="Resource" uid="uid://cs55tomugxnfv" path="res://dialogues/singe_koi.dialogue" id="30_fvw0o"]
+[ext_resource type="Texture2D" uid="uid://baqykqr7kp68b" path="res://Sprites/overworldCharacters/koi-complet.png" id="31_gyoq0"]
 [ext_resource type="PackedScene" uid="uid://qkgqubbya8m7" path="res://user_interfaces/pause_menu.tscn" id="31_p31dk"]
+[ext_resource type="AudioStream" uid="uid://cpim31xykohvh" path="res://musics/Ambiance_Pharmacie-Loop.ogg" id="32_5qaub"]
 [ext_resource type="PackedScene" uid="uid://cdbx020iv1acu" path="res://user_interfaces/monkey_and_gorilla_ending.tscn" id="32_r2nsl"]
 [ext_resource type="PackedScene" uid="uid://dwo1dj0aqlnyt" path="res://user_interfaces/bad_ending.tscn" id="33_bfshi"]
 [ext_resource type="PackedScene" uid="uid://c3fyh3ob7v2cc" path="res://user_interfaces/gorilla_ending.tscn" id="34_q6mnq"]
 [ext_resource type="PackedScene" uid="uid://da8lyr3jlnxhn" path="res://user_interfaces/monkey_ending.tscn" id="35_lejhl"]
-[ext_resource type="AudioStream" uid="uid://dhrmqx60gym46" path="res://musics/Music_Hub-Loop.ogg" id="36_whtfn"]
+[ext_resource type="AudioStream" uid="uid://dwkicurn7ph53" path="res://sfxs/Jingle-Win.wav" id="40_llc5b"]
+[ext_resource type="AudioStream" uid="uid://dt3i7lg1ok13t" path="res://sfxs/Jingle-Lose.wav" id="42_cgnby"]
+[ext_resource type="AudioStream" uid="uid://30ep1xips8po" path="res://sfxs/SFX_Footsteps.wav" id="43_f62w5"]
+[ext_resource type="AudioStream" uid="uid://d1gxddfue1v7i" path="res://sfxs/Jingle-meh.wav" id="44_dn2ca"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8yqq3"]
 resource_local_to_scene = true
@@ -153,6 +165,13 @@ selectableAreaPolygon = PackedVector2Array(-5.76947, -27.6896, 40.7897, -25.4007
 itemName = "Feuille"
 itemImage = ExtResource("9_xjaft")
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="CanvasLayer/HubZoo"]
+stream = ExtResource("10_n0lp1")
+volume_db = -10.0
+autoplay = true
+parameters/looping = true
+script = ExtResource("11_qb41c")
+
 [node name="GiraffeEnclosure" type="Panel" parent="CanvasLayer"]
 visible = false
 anchors_preset = 15
@@ -190,6 +209,13 @@ highlightColor = Color(0.215686, 1, 1, 1)
 highlightOpacityRange = Vector2(0.2, 0.5)
 highlightBlinkSpeed = 0.3
 selectableAreaPolygon = PackedVector2Array(110, 433, 123, -70, 318, -373, 229, -430, 160, -373, 177, -336, -91, -68, -232, -28, -279, 218, -144, 436)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="CanvasLayer/GiraffeEnclosure"]
+stream = ExtResource("17_hdgib")
+volume_db = -10.0
+autoplay = true
+parameters/looping = true
+script = ExtResource("11_qb41c")
 
 [node name="ApeEnclosure" type="Panel" parent="CanvasLayer"]
 anchors_preset = 15
@@ -243,6 +269,13 @@ highlightOpacityRange = Vector2(0.2, 0.5)
 highlightBlinkSpeed = 0.3
 selectableAreaPolygon = PackedVector2Array(287, 285, 274, -229, 191, -384, 78, -379, -275, -91, -347, 280, 53, 379)
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="CanvasLayer/ApeEnclosure"]
+stream = ExtResource("22_5stp1")
+volume_db = -10.0
+autoplay = true
+parameters/looping = true
+script = ExtResource("11_qb41c")
+
 [node name="ExitGate" type="Panel" parent="CanvasLayer"]
 visible = false
 anchors_preset = 15
@@ -277,6 +310,13 @@ dialogue_start = "singe_garde"
 image = ExtResource("21_hljpm")
 imageScale = 0.5
 selectableAreaPolygon = PackedVector2Array(-37.2727, -98.5109, -56.3636, -225.659, -160.909, -152.348, -295.455, -342.497, -291.818, -422.68, -324.545, -483.391, -298.182, -506.3, -142.727, -388.316, -140.909, -305.842, -34.5455, -363.116, -70.9091, -501.718, 77.2727, -563.574, 157.273, -470.79, 116.364, -365.407, 308.182, -193.585, 247.273, 30.9279, 196.364, 28.6369, 330.909, 514.318, 201.818, 534.937, 60.9091, 97.3654, -14.5455, 187.858, 47.2727, 452.463, -16.3636, 526.919, -116.364, 508.591, -91.8182, 436.426, -159.091, 151.203)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="CanvasLayer/ExitGate"]
+stream = ExtResource("26_15psl")
+volume_db = -10.0
+autoplay = true
+parameters/looping = true
+script = ExtResource("11_qb41c")
 
 [node name="KoiPond" type="Panel" parent="CanvasLayer"]
 visible = false
@@ -318,6 +358,21 @@ selectableAreaPolygon = PackedVector2Array(24.6507, 45.737, 87.6763, 19.0723, 77
 itemName = "Lunettes de soleil"
 itemImage = ExtResource("23_fdnfb")
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="CanvasLayer/KoiPond"]
+stream = ExtResource("29_iwmej")
+volume_db = -10.0
+autoplay = true
+parameters/looping = true
+script = ExtResource("11_qb41c")
+
+[node name="DialogueTrigger" parent="CanvasLayer/KoiPond" instance=ExtResource("12_srf10")]
+position = Vector2(1066, 592)
+dialogue_ressource = ExtResource("30_fvw0o")
+dialogue_start = "singe_koi"
+image = ExtResource("31_gyoq0")
+imageScale = 0.3
+selectableAreaPolygon = PackedVector2Array(-25, -30, 38, -48, 68, -81, 93, -76, 71, 27, 13, 69, -66, 69, -94, 21)
+
 [node name="Pharmacy" type="Panel" parent="CanvasLayer"]
 visible = false
 anchors_preset = 15
@@ -357,6 +412,12 @@ selectableAreaPolygon = PackedVector2Array(26.1932, 45.8715, 29.3694, -44.0981, 
 [node name="Supplements" parent="CanvasLayer/Pharmacy/Supplements" instance=ExtResource("8_nt6cm")]
 itemName = "Supplements"
 itemImage = ExtResource("25_naaii")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="CanvasLayer/Pharmacy"]
+stream = ExtResource("32_5qaub")
+autoplay = true
+parameters/looping = true
+script = ExtResource("11_qb41c")
 
 [node name="BurrowTerrier" type="Panel" parent="CanvasLayer"]
 visible = false
@@ -405,6 +466,13 @@ dialogue_start = "singe_taupe"
 image = ExtResource("29_inmmo")
 selectableAreaPolygon = PackedVector2Array(83, -68, 181, -9, 179, 25, 126, 42, -3, 66, -184, 2, -173, -58, 1, -74)
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="CanvasLayer/BurrowTerrier"]
+stream = ExtResource("29_iwmej")
+volume_db = -10.0
+autoplay = true
+parameters/looping = true
+script = ExtResource("11_qb41c")
+
 [node name="ShowInventory" parent="CanvasLayer" instance=ExtResource("30_2pufb")]
 
 [node name="PauseMenu" parent="CanvasLayer" instance=ExtResource("31_p31dk")]
@@ -417,16 +485,40 @@ z_index = 6
 unique_name_in_owner = true
 visible = false
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="CanvasLayer2/MonkeyAndGorillaEnding"]
+stream = ExtResource("40_llc5b")
+volume_db = 5.0
+autoplay = true
+script = ExtResource("11_qb41c")
+
 [node name="BadEnding" parent="CanvasLayer2" instance=ExtResource("33_bfshi")]
 visible = false
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="CanvasLayer2/BadEnding"]
+stream = ExtResource("42_cgnby")
+volume_db = 5.0
+autoplay = true
+script = ExtResource("11_qb41c")
 
 [node name="GorillaEnding" parent="CanvasLayer2" instance=ExtResource("34_q6mnq")]
 visible = false
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="CanvasLayer2/GorillaEnding"]
+stream = ExtResource("44_dn2ca")
+volume_db = 5.0
+autoplay = true
+script = ExtResource("11_qb41c")
+
 [node name="MonkeyEnding" parent="CanvasLayer2" instance=ExtResource("35_lejhl")]
 visible = false
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("36_whtfn")
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="CanvasLayer2/MonkeyEnding"]
+stream = ExtResource("44_dn2ca")
+volume_db = 5.0
 autoplay = true
-parameters/looping = true
+script = ExtResource("11_qb41c")
+
+[node name="MoveSound" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("43_f62w5")
+volume_db = -10.0

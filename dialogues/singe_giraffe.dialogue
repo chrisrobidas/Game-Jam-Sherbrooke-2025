@@ -1,19 +1,19 @@
 ~ singe_giraffe
 if PlayerGameState.hasOnceTalkedToGiraffe and "Feuille" in PlayerInventory.item_names:
-	singe-heureux: Voilà! On t'as apporté de quoi regagner de la force!
-	girafe-heureuse: Merci je me sens beaucoup mieux maintenant! Montez sur mon coup!
+	singe-heureux: Voilà! On t'a apporté quelque chose pour regagner de la force!
+	girafe-heureuse: Merci, je me sens beaucoup mieux maintenant! Montez sur mon cou!
 	gorille-neutre: T'as pas intérêt à nous lâcher...
 	do PlayerInventory.UseItemByName("Feuille")
 	do PlayerGameState.show_monkey_ending()
 else:
 	girafe-heureuse: Bonjour!
 	~ singe_giraffe_choix
-	- Wow tu est tellement grande, combien mesures-tu?
-		singe-heureux: Wow tu est tellement grande, combien mesures-tu?
+	- Wow tu est tellement grande! Combien mesures-tu?
+		singe-heureux: Wow, tu es tellement grande, combien mesures-tu?
 		gorille-fache: Mais on s'en fiche!!!
-		girafe-heureuse: Merci! En effet c'est un de mes plus grands atouts. Je mesure 4.2 mètres! => singe_giraffe_choix
+		girafe-heureuse: Merci! En effet, c'est un de mes plus grands atouts. Je mesure 4.2 mètres! => singe_giraffe_choix
 	- Giraffe, je t'en supplie tu dois nous aider...
-		singe-neutre: Giraffe, je t'en supplie tu dois nous aider, soulève nous avec ton grand cou pour qu'on puissent passer par dessus la grille.
+		singe-neutre: Giraffe, je t'en supplie tu dois nous aider, soulève-nous avec ton grand cou pour qu'on puisse passer par dessus la grille.
 		girafe-neutre: J'aimerais bien vous aider, mais je suis épuisée... si seulement je pouvais manger quelque chose pour me redonner de la force...
 		gorille-neutre: Bien sûr... on ne peux jamais simplement aider son prochain.
 		set PlayerGameState.hasOnceTalkedToGiraffe = true

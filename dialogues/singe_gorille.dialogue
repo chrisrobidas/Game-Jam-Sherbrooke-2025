@@ -3,18 +3,18 @@
 if PlayerGameState.hasBrokenCage:
 	gorille-neutre: Mais qu'est-ce qu'on attend? On y va!
 elif PlayerGameState.hasOnceTalkedToGorilla and "Banane" in PlayerInventory.item_names
-	gorille-neutre: Oh non pas toi encore...
-	singe-heureux: Écoute Gorille, je te donne une banane et en échange tu tord les barreaux de notre cage pour nous laisser sortir.
-	gorille-heureux: D'accord marché conclus, allons-y!
+	gorille-neutre: Oh non, pas toi encore...
+	singe-heureux: Écoute Gorille, je te donne une banane et en échange tu tords les barreaux de notre cage pour nous laisser sortir.
+	gorille-heureux: D'accord, marché conclu, allons-y!
 	do PlayerInventory.UseItemByName("Banane")
 	set PlayerGameState.hasBrokenCage = true
 else:
 	singe-heureux: [[Salut mon pote!|Salut mon gros!]], Comment vas-tu?
-	gorille-neutre: Laisse moi tranquille minus...
-	- Désolé de t'avoir déranger.
-		singe-neutre: Désolé de t'avoir déranger.
-	- Non mais on ne me parle pas comme ça!!!
-		singe-fache: Non mais on ne me parle pas comme ça!!!
+	gorille-neutre: Laisse-moi tranquille minus...
+	- Désolé de t'avoir dérangé.
+		singe-neutre: Désolé de t'avoir dérangé.
+	- Non, mais on ne me parle pas comme ça!!!
+		singe-fache: Non, mais on ne me parle pas comme ça!!!
 		gorille-fache: Dégage avant que je t'écrase!
 	set PlayerGameState.hasOnceTalkedToGorilla = true
 

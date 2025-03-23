@@ -1,10 +1,10 @@
 ~ singe_garde
-singe-neutre: Devrais-t-on vraiment essayer de passer?
+singe-neutre: Devrait-on vraiment essayer de passer?
 gorille-heureux: Oui on y va maintenant!
 - Continuer
 	if "Supplements" in PlayerInventory.item_names:
-		singe-neutre: (Vous donner les suppléments au gorille)
-		gorille-fache: Argggggg dégage de là
+		singe-neutre: (Vous donnez les suppléments au gorille)
+		gorille-fache: Argggggg dégage de là!
 		gorille-fache: (Le gorille nous prend par la queue et nous cogne avec le garde)
 		gorille-heureux: Je suis le roi des animaux, je suis trop fort. Enfin la liberté!!!
 		do PlayerGameState.show_gorilla_ending()

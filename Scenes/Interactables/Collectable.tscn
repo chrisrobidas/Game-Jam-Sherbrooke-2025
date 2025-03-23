@@ -1,14 +1,14 @@
 [gd_scene load_steps=4 format=3 uid="uid://iyae0o3nug2t"]
 
 [ext_resource type="Script" path="res://Scripts/Collectable.gd" id="1_aq32w"]
-[ext_resource type="Shader" path="res://Shaders/BlinkingHighlight.gdshader" id="2_tpm4s"]
+[ext_resource type="Shader" path="res://Shaders/ItemBlinkingHighlight.gdshader" id="2_1ltgq"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_qbfi1"]
-shader = ExtResource("2_tpm4s")
+shader = ExtResource("2_1ltgq")
 shader_parameter/highlightColor = Color(0.215686, 1, 1, 1)
-shader_parameter/highlightOpacityRange = Vector2(0.2, 0.7)
+shader_parameter/highlightOpacityRange = Vector2(0.2, 0.5)
 shader_parameter/highlightBlinkSpeed = 0.3
-shader_parameter/isHovered = true
+shader_parameter/isHovered = false
 
 [node name="Collectable" type="Area2D"]
 script = ExtResource("1_aq32w")

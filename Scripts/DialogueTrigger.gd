@@ -1,4 +1,4 @@
-extends Interactable
+extends Highlightable
 
 const Ballon = preload("res://user_interfaces/balloon.tscn")
 

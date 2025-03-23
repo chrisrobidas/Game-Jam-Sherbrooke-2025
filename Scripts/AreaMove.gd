@@ -5,4 +5,3 @@ class_name AreaMove extends Highlightable
 
 func Interact() -> void:
 	containingArea.MoveToNewArea(areaNode)
-	print("Moving to new area: ", areaNode.name)

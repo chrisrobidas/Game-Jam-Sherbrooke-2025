@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://vrke8yyjwte5"]
+[gd_scene load_steps=11 format=3 uid="uid://cchx81jhytq5v"]
 
 [ext_resource type="Texture2D" uid="uid://bhq0spg5enkg3" path="res://Sprites/environments/hub-zoo.png" id="1_mmega"]
 [ext_resource type="FontFile" uid="uid://vlkshjxq24pw" path="res://fonts/Coffe Break.otf" id="1_pmxgl"]

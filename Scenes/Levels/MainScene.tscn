@@ -1,4 +1,4 @@
-[gd_scene load_steps=59 format=3 uid="uid://dxci74ilmdpkw"]
+[gd_scene load_steps=60 format=3 uid="uid://dxci74ilmdpkw"]
 
 [ext_resource type="Script" path="res://Scripts/MainScene.gd" id="1_rnxxp"]
 [ext_resource type="Texture2D" uid="uid://dakk7uxe5itja" path="res://Sprites/backgrounds/hub-zoo.png" id="2_aymgc"]
@@ -22,6 +22,7 @@
 [ext_resource type="Resource" uid="uid://b64fu1xswy1er" path="res://dialogues/singe_gorille.dialogue" id="17_i3p3a"]
 [ext_resource type="Texture2D" uid="uid://61mjs0t4iadq" path="res://Sprites/overworldCharacters/gorille-complet.png" id="18_dugv3"]
 [ext_resource type="Texture2D" uid="uid://bpwalujrgs283" path="res://Sprites/backgrounds/gate.png" id="19_a262j"]
+[ext_resource type="Texture2D" uid="uid://b1apbrcv676la" path="res://Sprites/overworldCharacters/singe-complet.png" id="19_t5gph"]
 [ext_resource type="Resource" uid="uid://cg3120a5p8jp8" path="res://dialogues/singe_garde.dialogue" id="20_oeoa4"]
 [ext_resource type="Texture2D" uid="uid://b28esiu26knxh" path="res://Sprites/items/banane-ouvert.png" id="20_pu0li"]
 [ext_resource type="Texture2D" uid="uid://c1m4r1mkk0dhw" path="res://Sprites/overworldCharacters/garde-complet.png" id="21_hljpm"]
@@ -218,7 +219,18 @@ autoplay = true
 parameters/looping = true
 script = ExtResource("11_qb41c")
 
+[node name="Sprite2D3" type="Sprite2D" parent="MainCanvasLayer/GiraffeEnclosure"]
+position = Vector2(864, 749)
+scale = Vector2(0.125, 0.125)
+texture = ExtResource("19_t5gph")
+
+[node name="Sprite2D2" type="Sprite2D" parent="MainCanvasLayer/GiraffeEnclosure"]
+position = Vector2(1064, 619)
+scale = Vector2(-0.25, 0.25)
+texture = ExtResource("18_dugv3")
+
 [node name="ApeEnclosure" type="Panel" parent="MainCanvasLayer"]
+visible = false
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -319,7 +331,6 @@ parameters/looping = true
 script = ExtResource("11_qb41c")
 
 [node name="KoiPond" type="Panel" parent="MainCanvasLayer"]
-visible = false
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -373,6 +384,16 @@ image = ExtResource("31_gyoq0")
 imageScale = 0.3
 selectableAreaPolygon = PackedVector2Array(-25, -30, 38, -48, 68, -81, 93, -76, 71, 27, 13, 69, -66, 69, -94, 21)
 
+[node name="Sprite2D3" type="Sprite2D" parent="MainCanvasLayer/KoiPond"]
+position = Vector2(809, 806)
+scale = Vector2(-0.25, 0.25)
+texture = ExtResource("19_t5gph")
+
+[node name="Sprite2D2" type="Sprite2D" parent="MainCanvasLayer/KoiPond"]
+position = Vector2(285, 794)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("18_dugv3")
+
 [node name="Pharmacy" type="Panel" parent="MainCanvasLayer"]
 visible = false
 anchors_preset = 15
@@ -419,6 +440,16 @@ stream = ExtResource("32_5qaub")
 autoplay = true
 parameters/looping = true
 script = ExtResource("11_qb41c")
+
+[node name="Sprite2D3" type="Sprite2D" parent="MainCanvasLayer/Pharmacy"]
+position = Vector2(707, 408)
+scale = Vector2(-0.25, 0.25)
+texture = ExtResource("19_t5gph")
+
+[node name="Sprite2D2" type="Sprite2D" parent="MainCanvasLayer/Pharmacy"]
+position = Vector2(1379, 619)
+scale = Vector2(-0.75, 0.75)
+texture = ExtResource("18_dugv3")
 
 [node name="BurrowTerrier" type="Panel" parent="MainCanvasLayer"]
 visible = false

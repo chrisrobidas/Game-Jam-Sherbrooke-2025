@@ -230,7 +230,6 @@ scale = Vector2(-0.25, 0.25)
 texture = ExtResource("18_dugv3")
 
 [node name="ApeEnclosure" type="Panel" parent="MainCanvasLayer"]
-visible = false
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -331,6 +330,7 @@ parameters/looping = true
 script = ExtResource("11_qb41c")
 
 [node name="KoiPond" type="Panel" parent="MainCanvasLayer"]
+visible = false
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0

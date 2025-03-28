@@ -1,4 +1,4 @@
-[gd_scene load_steps=56 format=3 uid="uid://dxci74ilmdpkw"]
+[gd_scene load_steps=59 format=3 uid="uid://dxci74ilmdpkw"]
 
 [ext_resource type="Script" path="res://Scripts/MainScene.gd" id="1_rnxxp"]
 [ext_resource type="Texture2D" uid="uid://dakk7uxe5itja" path="res://Sprites/backgrounds/hub-zoo.png" id="2_aymgc"]
@@ -23,6 +23,7 @@
 [ext_resource type="Texture2D" uid="uid://61mjs0t4iadq" path="res://Sprites/overworldCharacters/gorille-complet.png" id="18_dugv3"]
 [ext_resource type="Texture2D" uid="uid://bpwalujrgs283" path="res://Sprites/backgrounds/gate.png" id="19_a262j"]
 [ext_resource type="Resource" uid="uid://cg3120a5p8jp8" path="res://dialogues/singe_garde.dialogue" id="20_oeoa4"]
+[ext_resource type="Texture2D" uid="uid://b28esiu26knxh" path="res://Sprites/items/banane-ouvert.png" id="20_pu0li"]
 [ext_resource type="Texture2D" uid="uid://c1m4r1mkk0dhw" path="res://Sprites/overworldCharacters/garde-complet.png" id="21_hljpm"]
 [ext_resource type="AudioStream" uid="uid://wghvapsy5wll" path="res://musics/Music_3-loop.ogg" id="22_5stp1"]
 [ext_resource type="Texture2D" uid="uid://ct7ow06i2yqn2" path="res://Sprites/backgrounds/koi-pond.png" id="22_um5kw"]
@@ -43,7 +44,9 @@
 [ext_resource type="PackedScene" uid="uid://cdbx020iv1acu" path="res://user_interfaces/monkey_and_gorilla_ending.tscn" id="32_r2nsl"]
 [ext_resource type="PackedScene" uid="uid://dwo1dj0aqlnyt" path="res://user_interfaces/bad_ending.tscn" id="33_bfshi"]
 [ext_resource type="PackedScene" uid="uid://c3fyh3ob7v2cc" path="res://user_interfaces/gorilla_ending.tscn" id="34_q6mnq"]
+[ext_resource type="Texture2D" uid="uid://d3ucs0b0lkb25" path="res://Sprites/items/supplements-2.png" id="35_5ks6n"]
 [ext_resource type="PackedScene" uid="uid://da8lyr3jlnxhn" path="res://user_interfaces/monkey_ending.tscn" id="35_lejhl"]
+[ext_resource type="Texture2D" uid="uid://d00f4sidxxgae" path="res://Sprites/items/cle.png" id="39_nd2ox"]
 [ext_resource type="AudioStream" uid="uid://dwkicurn7ph53" path="res://sfxs/Jingle-Win.wav" id="40_llc5b"]
 [ext_resource type="AudioStream" uid="uid://dt3i7lg1ok13t" path="res://sfxs/Jingle-Lose.wav" id="42_cgnby"]
 [ext_resource type="AudioStream" uid="uid://30ep1xips8po" path="res://sfxs/SFX_Footsteps.wav" id="43_f62w5"]
@@ -79,11 +82,11 @@ texture = ExtResource("26_bi08a")
 
 [node name="MainScene" type="Node2D" node_paths=PackedStringArray("scenes")]
 script = ExtResource("1_rnxxp")
-scenes = [NodePath("CanvasLayer/HubZoo"), NodePath("CanvasLayer/GiraffeEnclosure"), NodePath("CanvasLayer/ApeEnclosure"), NodePath("CanvasLayer/ExitGate"), NodePath("CanvasLayer/KoiPond"), NodePath("CanvasLayer/Pharmacy"), NodePath("CanvasLayer/BurrowTerrier")]
+scenes = [NodePath("MainCanvasLayer/HubZoo"), NodePath("MainCanvasLayer/GiraffeEnclosure"), NodePath("MainCanvasLayer/ApeEnclosure"), NodePath("MainCanvasLayer/ExitGate"), NodePath("MainCanvasLayer/KoiPond"), NodePath("MainCanvasLayer/Pharmacy"), NodePath("MainCanvasLayer/BurrowTerrier")]
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="MainCanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="HubZoo" type="Panel" parent="CanvasLayer"]
+[node name="HubZoo" type="Panel" parent="MainCanvasLayer"]
 visible = false
 anchors_preset = 15
 anchor_right = 1.0
@@ -93,7 +96,7 @@ grow_vertical = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_8yqq3")
 
-[node name="MoveToGiraffe" parent="CanvasLayer/HubZoo" node_paths=PackedStringArray("areaNode", "containingArea") instance=ExtResource("3_lel4f")]
+[node name="MoveToGiraffe" parent="MainCanvasLayer/HubZoo" node_paths=PackedStringArray("areaNode", "containingArea") instance=ExtResource("3_lel4f")]
 visible = false
 z_index = 5
 scale = Vector2(0.999999, 0.999999)
@@ -101,7 +104,7 @@ areaNode = NodePath("../../GiraffeEnclosure")
 containingArea = NodePath("../../..")
 selectableAreaPolygon = PackedVector2Array(1560, 192, 1520, 600.001, 1561, 641.001, 1615, 659.001, 1681, 671.001, 1925, 646.001, 1929, 126, 1775, 133)
 
-[node name="MoveToKoi" parent="CanvasLayer/HubZoo" node_paths=PackedStringArray("areaNode", "containingArea") instance=ExtResource("3_lel4f")]
+[node name="MoveToKoi" parent="MainCanvasLayer/HubZoo" node_paths=PackedStringArray("areaNode", "containingArea") instance=ExtResource("3_lel4f")]
 visible = false
 z_index = 5
 scale = Vector2(0.999999, 0.999999)
@@ -109,7 +112,7 @@ areaNode = NodePath("../../KoiPond")
 containingArea = NodePath("../../..")
 selectableAreaPolygon = PackedVector2Array(879.001, 653.001, 708.001, 669.001, 555.001, 725.001, 533, 769.001, 544, 824.001, 688.001, 862.001, 918.001, 869.001, 1159, 858.001, 1312, 828.001, 1337, 796.001, 1332, 721.001, 1191, 668.001, 1022, 653.001)
 
-[node name="MoveToMonkey" parent="CanvasLayer/HubZoo" node_paths=PackedStringArray("areaNode", "containingArea") instance=ExtResource("3_lel4f")]
+[node name="MoveToMonkey" parent="MainCanvasLayer/HubZoo" node_paths=PackedStringArray("areaNode", "containingArea") instance=ExtResource("3_lel4f")]
 visible = false
 z_index = 5
 scale = Vector2(0.999999, 0.999999)
@@ -117,7 +120,7 @@ areaNode = NodePath("../../ApeEnclosure")
 containingArea = NodePath("../../..")
 selectableAreaPolygon = PackedVector2Array(-7.00001, 380, -5, 1085, 232, 1087, 393, 1001, 360, 453, 284, 414, 128, 389)
 
-[node name="MoveToBurrow" parent="CanvasLayer/HubZoo" node_paths=PackedStringArray("areaNode", "containingArea") instance=ExtResource("3_lel4f")]
+[node name="MoveToBurrow" parent="MainCanvasLayer/HubZoo" node_paths=PackedStringArray("areaNode", "containingArea") instance=ExtResource("3_lel4f")]
 visible = false
 z_index = 4
 scale = Vector2(0.999999, 0.999999)
@@ -125,17 +128,15 @@ areaNode = NodePath("../../BurrowTerrier")
 containingArea = NodePath("../../..")
 selectableAreaPolygon = PackedVector2Array(-17, 336, 419, 149, 537, 112, 699.001, 149, 717.001, 336, 287, 493, -21, 395)
 
-[node name="MoveToPharmacyLocked" parent="CanvasLayer/HubZoo" instance=ExtResource("3_lel4f")]
+[node name="MoveToPharmacyLocked" parent="MainCanvasLayer/HubZoo" instance=ExtResource("3_lel4f")]
 z_index = 4
 scale = Vector2(0.999999, 0.999999)
 script = ExtResource("4_t8qf2")
 dialogue_ressource_lock = ExtResource("5_8bj5l")
-dialogue_start_lock = "singe_porte_verouille"
 dialogue_ressource_unlock = ExtResource("6_vbcqk")
-dialogue_start_unlock = "singe_porte_deverouille"
 selectableAreaPolygon = PackedVector2Array(1159, 183, 1260, 103, 1481, 144, 1585, 226, 1576, 424, 1374, 525, 1155, 384)
 
-[node name="MoveToPharmacy" parent="CanvasLayer/HubZoo" node_paths=PackedStringArray("areaNode", "containingArea") instance=ExtResource("3_lel4f")]
+[node name="MoveToPharmacy" parent="MainCanvasLayer/HubZoo" node_paths=PackedStringArray("areaNode", "containingArea") instance=ExtResource("3_lel4f")]
 visible = false
 z_index = 4
 scale = Vector2(0.999999, 0.999999)
@@ -144,7 +145,7 @@ containingArea = NodePath("../../..")
 conditionToAllow = "hasUnlockDoor"
 selectableAreaPolygon = PackedVector2Array(1159, 183, 1260, 103, 1481, 144, 1585, 226, 1576, 424, 1374, 525, 1155, 384)
 
-[node name="MoveToExit" parent="CanvasLayer/HubZoo" node_paths=PackedStringArray("areaNode", "containingArea") instance=ExtResource("3_lel4f")]
+[node name="MoveToExit" parent="MainCanvasLayer/HubZoo" node_paths=PackedStringArray("areaNode", "containingArea") instance=ExtResource("3_lel4f")]
 visible = false
 z_index = 3
 scale = Vector2(0.999999, 0.999999)
@@ -152,7 +153,7 @@ areaNode = NodePath("../../ExitGate")
 containingArea = NodePath("../../..")
 selectableAreaPolygon = PackedVector2Array(1066, -1, 1333, 19, 1656, 94.0001, 1633, 215, 909.001, 324, 802.001, 311, 788.001, 131, 881.001, 35)
 
-[node name="Feuille" parent="CanvasLayer/HubZoo" node_paths=PackedStringArray("show_inventory", "item") instance=ExtResource("7_sf7s4")]
+[node name="Feuille" parent="MainCanvasLayer/HubZoo" node_paths=PackedStringArray("show_inventory", "item") instance=ExtResource("7_sf7s4")]
 z_index = 5
 position = Vector2(502, 528)
 rotation = 0.347321
@@ -161,18 +162,19 @@ item = NodePath("Feuille")
 imageScale = 0.3
 selectableAreaPolygon = PackedVector2Array(-5.76947, -27.6896, 40.7897, -25.4007, 62.1229, -7.59912, 34.059, 20.6394, -22.3414, 29.3575, -62.0421, 10.7603, -39.1987, -11.3344)
 
-[node name="Feuille" parent="CanvasLayer/HubZoo/Feuille" instance=ExtResource("8_nt6cm")]
+[node name="Feuille" parent="MainCanvasLayer/HubZoo/Feuille" instance=ExtResource("8_nt6cm")]
 itemName = "Feuille"
 itemImage = ExtResource("9_xjaft")
+itemCollectedImage = ExtResource("9_xjaft")
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="CanvasLayer/HubZoo"]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="MainCanvasLayer/HubZoo"]
 stream = ExtResource("10_n0lp1")
 volume_db = -10.0
 autoplay = true
 parameters/looping = true
 script = ExtResource("11_qb41c")
 
-[node name="GiraffeEnclosure" type="Panel" parent="CanvasLayer"]
+[node name="GiraffeEnclosure" type="Panel" parent="MainCanvasLayer"]
 visible = false
 anchors_preset = 15
 anchor_right = 1.0
@@ -182,13 +184,13 @@ grow_vertical = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_uoj16")
 
-[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/GiraffeEnclosure"]
+[node name="Sprite2D" type="Sprite2D" parent="MainCanvasLayer/GiraffeEnclosure"]
 visible = false
 position = Vector2(1689.09, 110.7)
 scale = Vector2(0.29, 0.25)
 texture = ExtResource("11_q0rxm")
 
-[node name="BackToHub" parent="CanvasLayer/GiraffeEnclosure/Sprite2D" node_paths=PackedStringArray("areaNode", "containingArea", "sprite") instance=ExtResource("3_lel4f")]
+[node name="BackToHub" parent="MainCanvasLayer/GiraffeEnclosure/Sprite2D" node_paths=PackedStringArray("areaNode", "containingArea", "sprite") instance=ExtResource("3_lel4f")]
 visible = false
 z_index = 3
 position = Vector2(-5824.45, -442.8)
@@ -198,11 +200,10 @@ containingArea = NodePath("../../../..")
 sprite = NodePath("..")
 selectableAreaPolygon = PackedVector2Array(1925, 75, 1925, 185, 2050, 185, 2050, 75)
 
-[node name="Giraffe" parent="CanvasLayer/GiraffeEnclosure" instance=ExtResource("12_srf10")]
+[node name="Giraffe" parent="MainCanvasLayer/GiraffeEnclosure" instance=ExtResource("12_srf10")]
 z_index = 5
 position = Vector2(510, 491)
 dialogue_ressource = ExtResource("13_xdrct")
-dialogue_start = "singe_giraffe"
 image = ExtResource("14_ya3dn")
 imageScale = 0.575
 highlightColor = Color(0.215686, 1, 1, 1)
@@ -210,14 +211,14 @@ highlightOpacityRange = Vector2(0.2, 0.5)
 highlightBlinkSpeed = 0.3
 selectableAreaPolygon = PackedVector2Array(110, 433, 123, -70, 318, -373, 229, -430, 160, -373, 177, -336, -91, -68, -232, -28, -279, 218, -144, 436)
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="CanvasLayer/GiraffeEnclosure"]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="MainCanvasLayer/GiraffeEnclosure"]
 stream = ExtResource("17_hdgib")
 volume_db = -10.0
 autoplay = true
 parameters/looping = true
 script = ExtResource("11_qb41c")
 
-[node name="ApeEnclosure" type="Panel" parent="CanvasLayer"]
+[node name="ApeEnclosure" type="Panel" parent="MainCanvasLayer"]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -226,13 +227,13 @@ grow_vertical = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_ah06v")
 
-[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/ApeEnclosure"]
+[node name="Sprite2D" type="Sprite2D" parent="MainCanvasLayer/ApeEnclosure"]
 visible = false
 position = Vector2(1689.09, 110.7)
 scale = Vector2(0.29, 0.25)
 texture = ExtResource("11_q0rxm")
 
-[node name="BackToHub" parent="CanvasLayer/ApeEnclosure/Sprite2D" node_paths=PackedStringArray("areaNode", "containingArea", "sprite") instance=ExtResource("3_lel4f")]
+[node name="BackToHub" parent="MainCanvasLayer/ApeEnclosure/Sprite2D" node_paths=PackedStringArray("areaNode", "containingArea", "sprite") instance=ExtResource("3_lel4f")]
 visible = false
 z_index = 3
 position = Vector2(-5824.45, -442.8)
@@ -243,7 +244,7 @@ sprite = NodePath("..")
 conditionToAllow = "hasBrokenCage"
 selectableAreaPolygon = PackedVector2Array(1925, 75, 1925, 185, 2050, 185, 2050, 75)
 
-[node name="Banane" parent="CanvasLayer/ApeEnclosure" node_paths=PackedStringArray("show_inventory", "item") instance=ExtResource("7_sf7s4")]
+[node name="Banane" parent="MainCanvasLayer/ApeEnclosure" node_paths=PackedStringArray("show_inventory", "item") instance=ExtResource("7_sf7s4")]
 z_index = 5
 position = Vector2(1629, 276)
 rotation = -2.0752
@@ -253,15 +254,15 @@ item = NodePath("Banane")
 imageScale = 0.3
 selectableAreaPolygon = PackedVector2Array(52.1222, 25.5871, 68.4748, 25.5168, 40.0706, -23.8636, -24.3052, -23.957, -64.6437, -9.35471, -53.1069, 6.3566, -25.77, 14.0086)
 
-[node name="Banane" parent="CanvasLayer/ApeEnclosure/Banane" instance=ExtResource("8_nt6cm")]
+[node name="Banane" parent="MainCanvasLayer/ApeEnclosure/Banane" instance=ExtResource("8_nt6cm")]
 itemName = "Banane"
 itemImage = ExtResource("16_yr8a1")
+itemCollectedImage = ExtResource("20_pu0li")
 
-[node name="Gorilla" parent="CanvasLayer/ApeEnclosure" instance=ExtResource("12_srf10")]
+[node name="Gorilla" parent="MainCanvasLayer/ApeEnclosure" instance=ExtResource("12_srf10")]
 z_index = 5
 position = Vector2(536, 558)
 dialogue_ressource = ExtResource("17_i3p3a")
-dialogue_start = "singe_gorille"
 image = ExtResource("18_dugv3")
 imageScale = 0.64
 highlightColor = Color(0.215686, 1, 1, 1)
@@ -269,14 +270,14 @@ highlightOpacityRange = Vector2(0.2, 0.5)
 highlightBlinkSpeed = 0.3
 selectableAreaPolygon = PackedVector2Array(287, 285, 274, -229, 191, -384, 78, -379, -275, -91, -347, 280, 53, 379)
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="CanvasLayer/ApeEnclosure"]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="MainCanvasLayer/ApeEnclosure"]
 stream = ExtResource("22_5stp1")
 volume_db = -10.0
 autoplay = true
 parameters/looping = true
 script = ExtResource("11_qb41c")
 
-[node name="ExitGate" type="Panel" parent="CanvasLayer"]
+[node name="ExitGate" type="Panel" parent="MainCanvasLayer"]
 visible = false
 anchors_preset = 15
 anchor_right = 1.0
@@ -286,13 +287,13 @@ grow_vertical = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_aqv3p")
 
-[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/ExitGate"]
+[node name="Sprite2D" type="Sprite2D" parent="MainCanvasLayer/ExitGate"]
 visible = false
 position = Vector2(1689.09, 110.7)
 scale = Vector2(0.29, 0.25)
 texture = ExtResource("11_q0rxm")
 
-[node name="BackToHub" parent="CanvasLayer/ExitGate/Sprite2D" node_paths=PackedStringArray("areaNode", "containingArea", "sprite") instance=ExtResource("3_lel4f")]
+[node name="BackToHub" parent="MainCanvasLayer/ExitGate/Sprite2D" node_paths=PackedStringArray("areaNode", "containingArea", "sprite") instance=ExtResource("3_lel4f")]
 visible = false
 z_index = 3
 position = Vector2(-5824.45, -442.8)
@@ -302,23 +303,22 @@ containingArea = NodePath("../../../..")
 sprite = NodePath("..")
 selectableAreaPolygon = PackedVector2Array(1925, 75, 1925, 185, 2050, 185, 2050, 75)
 
-[node name="DialogueTrigger" parent="CanvasLayer/ExitGate" instance=ExtResource("12_srf10")]
-position = Vector2(971, 589)
+[node name="DialogueTrigger" parent="MainCanvasLayer/ExitGate" instance=ExtResource("12_srf10")]
+position = Vector2(966, 589)
 scale = Vector2(1.1, 0.873)
 dialogue_ressource = ExtResource("20_oeoa4")
-dialogue_start = "singe_garde"
 image = ExtResource("21_hljpm")
 imageScale = 0.5
 selectableAreaPolygon = PackedVector2Array(-37.2727, -98.5109, -56.3636, -225.659, -160.909, -152.348, -295.455, -342.497, -291.818, -422.68, -324.545, -483.391, -298.182, -506.3, -142.727, -388.316, -140.909, -305.842, -34.5455, -363.116, -70.9091, -501.718, 77.2727, -563.574, 157.273, -470.79, 116.364, -365.407, 308.182, -193.585, 247.273, 30.9279, 196.364, 28.6369, 330.909, 514.318, 201.818, 534.937, 60.9091, 97.3654, -14.5455, 187.858, 47.2727, 452.463, -16.3636, 526.919, -116.364, 508.591, -91.8182, 436.426, -159.091, 151.203)
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="CanvasLayer/ExitGate"]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="MainCanvasLayer/ExitGate"]
 stream = ExtResource("26_15psl")
 volume_db = -10.0
 autoplay = true
 parameters/looping = true
 script = ExtResource("11_qb41c")
 
-[node name="KoiPond" type="Panel" parent="CanvasLayer"]
+[node name="KoiPond" type="Panel" parent="MainCanvasLayer"]
 visible = false
 anchors_preset = 15
 anchor_right = 1.0
@@ -328,13 +328,13 @@ grow_vertical = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_6ng4c")
 
-[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/KoiPond"]
+[node name="Sprite2D" type="Sprite2D" parent="MainCanvasLayer/KoiPond"]
 visible = false
 position = Vector2(1689.09, 110.7)
 scale = Vector2(0.29, 0.25)
 texture = ExtResource("11_q0rxm")
 
-[node name="BackToHub" parent="CanvasLayer/KoiPond/Sprite2D" node_paths=PackedStringArray("areaNode", "containingArea", "sprite") instance=ExtResource("3_lel4f")]
+[node name="BackToHub" parent="MainCanvasLayer/KoiPond/Sprite2D" node_paths=PackedStringArray("areaNode", "containingArea", "sprite") instance=ExtResource("3_lel4f")]
 visible = false
 z_index = 3
 position = Vector2(-5824.45, -442.8)
@@ -344,7 +344,7 @@ containingArea = NodePath("../../../..")
 sprite = NodePath("..")
 selectableAreaPolygon = PackedVector2Array(1925, 75, 1925, 185, 2050, 185, 2050, 75)
 
-[node name="Lunettes" parent="CanvasLayer/KoiPond" node_paths=PackedStringArray("show_inventory", "item") instance=ExtResource("7_sf7s4")]
+[node name="Lunettes" parent="MainCanvasLayer/KoiPond" node_paths=PackedStringArray("show_inventory", "item") instance=ExtResource("7_sf7s4")]
 z_index = 5
 position = Vector2(82.0001, 589)
 rotation = -0.310669
@@ -354,26 +354,26 @@ item = NodePath("Lunettes")
 imageScale = 0.46
 selectableAreaPolygon = PackedVector2Array(24.6507, 45.737, 87.6763, 19.0723, 77.3829, -5.41321, -4.95891, -36.389, -70.879, -24.2697, -76.8924, 8.59637)
 
-[node name="Lunettes" parent="CanvasLayer/KoiPond/Lunettes" instance=ExtResource("8_nt6cm")]
+[node name="Lunettes" parent="MainCanvasLayer/KoiPond/Lunettes" instance=ExtResource("8_nt6cm")]
 itemName = "Lunettes de soleil"
 itemImage = ExtResource("23_fdnfb")
+itemCollectedImage = ExtResource("23_fdnfb")
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="CanvasLayer/KoiPond"]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="MainCanvasLayer/KoiPond"]
 stream = ExtResource("29_iwmej")
 volume_db = -10.0
 autoplay = true
 parameters/looping = true
 script = ExtResource("11_qb41c")
 
-[node name="DialogueTrigger" parent="CanvasLayer/KoiPond" instance=ExtResource("12_srf10")]
+[node name="DialogueTrigger" parent="MainCanvasLayer/KoiPond" instance=ExtResource("12_srf10")]
 position = Vector2(1066, 592)
 dialogue_ressource = ExtResource("30_fvw0o")
-dialogue_start = "singe_koi"
 image = ExtResource("31_gyoq0")
 imageScale = 0.3
 selectableAreaPolygon = PackedVector2Array(-25, -30, 38, -48, 68, -81, 93, -76, 71, 27, 13, 69, -66, 69, -94, 21)
 
-[node name="Pharmacy" type="Panel" parent="CanvasLayer"]
+[node name="Pharmacy" type="Panel" parent="MainCanvasLayer"]
 visible = false
 anchors_preset = 15
 anchor_right = 1.0
@@ -383,13 +383,13 @@ grow_vertical = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_1oih5")
 
-[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/Pharmacy"]
+[node name="Sprite2D" type="Sprite2D" parent="MainCanvasLayer/Pharmacy"]
 visible = false
 position = Vector2(1689.09, 110.7)
 scale = Vector2(0.29, 0.25)
 texture = ExtResource("11_q0rxm")
 
-[node name="BackToHub" parent="CanvasLayer/Pharmacy/Sprite2D" node_paths=PackedStringArray("areaNode", "containingArea", "sprite") instance=ExtResource("3_lel4f")]
+[node name="BackToHub" parent="MainCanvasLayer/Pharmacy/Sprite2D" node_paths=PackedStringArray("areaNode", "containingArea", "sprite") instance=ExtResource("3_lel4f")]
 visible = false
 z_index = 3
 position = Vector2(-5824.45, -442.8)
@@ -399,7 +399,7 @@ containingArea = NodePath("../../../..")
 sprite = NodePath("..")
 selectableAreaPolygon = PackedVector2Array(1925, 75, 1925, 185, 2050, 185, 2050, 75)
 
-[node name="Supplements" parent="CanvasLayer/Pharmacy" node_paths=PackedStringArray("show_inventory", "item") instance=ExtResource("7_sf7s4")]
+[node name="Supplements" parent="MainCanvasLayer/Pharmacy" node_paths=PackedStringArray("show_inventory", "item") instance=ExtResource("7_sf7s4")]
 z_index = 5
 position = Vector2(323, 278)
 rotation = -0.102974
@@ -409,17 +409,18 @@ item = NodePath("Supplements")
 imageScale = 0.3
 selectableAreaPolygon = PackedVector2Array(26.1932, 45.8715, 29.3694, -44.0981, -41.7712, -38.1367, -45.5792, 55.2534)
 
-[node name="Supplements" parent="CanvasLayer/Pharmacy/Supplements" instance=ExtResource("8_nt6cm")]
+[node name="Supplements" parent="MainCanvasLayer/Pharmacy/Supplements" instance=ExtResource("8_nt6cm")]
 itemName = "Supplements"
 itemImage = ExtResource("25_naaii")
+itemCollectedImage = ExtResource("35_5ks6n")
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="CanvasLayer/Pharmacy"]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="MainCanvasLayer/Pharmacy"]
 stream = ExtResource("32_5qaub")
 autoplay = true
 parameters/looping = true
 script = ExtResource("11_qb41c")
 
-[node name="BurrowTerrier" type="Panel" parent="CanvasLayer"]
+[node name="BurrowTerrier" type="Panel" parent="MainCanvasLayer"]
 visible = false
 anchors_preset = 15
 anchor_right = 1.0
@@ -429,13 +430,13 @@ grow_vertical = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_yk6rf")
 
-[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/BurrowTerrier"]
+[node name="Sprite2D" type="Sprite2D" parent="MainCanvasLayer/BurrowTerrier"]
 visible = false
 position = Vector2(1689.09, 110.7)
 scale = Vector2(0.29, 0.25)
 texture = ExtResource("11_q0rxm")
 
-[node name="BackToHub" parent="CanvasLayer/BurrowTerrier/Sprite2D" node_paths=PackedStringArray("areaNode", "containingArea", "sprite") instance=ExtResource("3_lel4f")]
+[node name="BackToHub" parent="MainCanvasLayer/BurrowTerrier/Sprite2D" node_paths=PackedStringArray("areaNode", "containingArea", "sprite") instance=ExtResource("3_lel4f")]
 visible = false
 z_index = 3
 position = Vector2(-5824.45, -442.8)
@@ -445,7 +446,7 @@ containingArea = NodePath("../../../..")
 sprite = NodePath("..")
 selectableAreaPolygon = PackedVector2Array(1925, 75, 1925, 185, 2050, 185, 2050, 75)
 
-[node name="Clef" parent="CanvasLayer/BurrowTerrier" node_paths=PackedStringArray("show_inventory", "item") instance=ExtResource("7_sf7s4")]
+[node name="Clef" parent="MainCanvasLayer/BurrowTerrier" node_paths=PackedStringArray("show_inventory", "item") instance=ExtResource("7_sf7s4")]
 z_index = 5
 position = Vector2(245, 914)
 rotation = 0.125664
@@ -455,64 +456,60 @@ item = NodePath("Clef")
 imageScale = 0.3
 selectableAreaPolygon = PackedVector2Array(57.9115, 40.7643, -64.2773, 54.9834, 38.3983, -24.0361)
 
-[node name="Clef" parent="CanvasLayer/BurrowTerrier/Clef" instance=ExtResource("8_nt6cm")]
+[node name="Clef" parent="MainCanvasLayer/BurrowTerrier/Clef" instance=ExtResource("8_nt6cm")]
 itemName = "Clef"
 itemImage = ExtResource("27_7j4f2")
+itemCollectedImage = ExtResource("39_nd2ox")
 
-[node name="DialogueTrigger" parent="CanvasLayer/BurrowTerrier" instance=ExtResource("12_srf10")]
+[node name="DialogueTrigger" parent="MainCanvasLayer/BurrowTerrier" instance=ExtResource("12_srf10")]
 position = Vector2(936, 577)
 dialogue_ressource = ExtResource("28_o66rb")
-dialogue_start = "singe_taupe"
 image = ExtResource("29_inmmo")
 selectableAreaPolygon = PackedVector2Array(83, -68, 181, -9, 179, 25, 126, 42, -3, 66, -184, 2, -173, -58, 1, -74)
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="CanvasLayer/BurrowTerrier"]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="MainCanvasLayer/BurrowTerrier"]
 stream = ExtResource("29_iwmej")
 volume_db = -10.0
 autoplay = true
 parameters/looping = true
 script = ExtResource("11_qb41c")
 
-[node name="ShowInventory" parent="CanvasLayer" instance=ExtResource("30_2pufb")]
+[node name="ShowInventory" parent="MainCanvasLayer" instance=ExtResource("30_2pufb")]
 
-[node name="PauseMenu" parent="CanvasLayer" instance=ExtResource("31_p31dk")]
-visible = false
-z_index = 6
+[node name="EndingsCanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="CanvasLayer2" type="CanvasLayer" parent="."]
-
-[node name="MonkeyAndGorillaEnding" parent="CanvasLayer2" instance=ExtResource("32_r2nsl")]
+[node name="MonkeyAndGorillaEnding" parent="EndingsCanvasLayer" instance=ExtResource("32_r2nsl")]
 unique_name_in_owner = true
 visible = false
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="CanvasLayer2/MonkeyAndGorillaEnding"]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="EndingsCanvasLayer/MonkeyAndGorillaEnding"]
 stream = ExtResource("40_llc5b")
 volume_db = 5.0
 autoplay = true
 script = ExtResource("11_qb41c")
 
-[node name="BadEnding" parent="CanvasLayer2" instance=ExtResource("33_bfshi")]
+[node name="BadEnding" parent="EndingsCanvasLayer" instance=ExtResource("33_bfshi")]
 visible = false
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="CanvasLayer2/BadEnding"]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="EndingsCanvasLayer/BadEnding"]
 stream = ExtResource("42_cgnby")
 volume_db = 5.0
 autoplay = true
 script = ExtResource("11_qb41c")
 
-[node name="GorillaEnding" parent="CanvasLayer2" instance=ExtResource("34_q6mnq")]
+[node name="GorillaEnding" parent="EndingsCanvasLayer" instance=ExtResource("34_q6mnq")]
 visible = false
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="CanvasLayer2/GorillaEnding"]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="EndingsCanvasLayer/GorillaEnding"]
 stream = ExtResource("44_dn2ca")
 volume_db = 5.0
 autoplay = true
 script = ExtResource("11_qb41c")
 
-[node name="MonkeyEnding" parent="CanvasLayer2" instance=ExtResource("35_lejhl")]
+[node name="MonkeyEnding" parent="EndingsCanvasLayer" instance=ExtResource("35_lejhl")]
 visible = false
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="CanvasLayer2/MonkeyEnding"]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="EndingsCanvasLayer/MonkeyEnding"]
 stream = ExtResource("44_dn2ca")
 volume_db = 5.0
 autoplay = true
@@ -522,3 +519,10 @@ script = ExtResource("11_qb41c")
 unique_name_in_owner = true
 stream = ExtResource("43_f62w5")
 volume_db = -10.0
+
+[node name="PauseMenuCanvasLayer" type="CanvasLayer" parent="."]
+layer = 2
+
+[node name="PauseMenu" parent="PauseMenuCanvasLayer" instance=ExtResource("31_p31dk")]
+visible = false
+z_index = 6

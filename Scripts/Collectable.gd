@@ -18,5 +18,6 @@ func Interact() -> void:
 	PlayerInventory.CollectItem(item)
 	show_inventory.UpdateItemList()
 	pickup_sound.play()
+	SetHovered(false)
 	self.isInteractionEnabled = false;
 	self.hide()

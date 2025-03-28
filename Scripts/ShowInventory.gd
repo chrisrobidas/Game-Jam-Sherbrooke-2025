@@ -6,5 +6,5 @@ func _ready():
 func UpdateItemList() -> void:
 	$ItemList.clear()
 	for item in PlayerInventory.items:
-		var index = $ItemList.add_icon_item(item.itemImage, false)
+		var index = $ItemList.add_icon_item(item.itemCollectedImage, false)
 		$ItemList.set_item_tooltip(index, item.itemName)

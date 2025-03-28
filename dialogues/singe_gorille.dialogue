@@ -16,6 +16,7 @@ else:
 	- Non, mais on ne me parle pas comme ça!!!
 		singe-fache: Non, mais on ne me parle pas comme ça!!!
 		gorille-fache: Dégage avant que je t'écrase!
+	singe-neutre: Il ne semble pas être lui même... peut-être que je devrais lui donner quelque chose à manger.
 	set PlayerGameState.hasOnceTalkedToGorilla = true
 
 => END

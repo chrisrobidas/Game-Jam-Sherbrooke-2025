@@ -84,7 +84,6 @@ texture = ExtResource("7_jt7y2")
 texture = ExtResource("6_w6n6m")
 
 [node name="DialogueBalloon" type="CanvasLayer"]
-layer = 100
 script = ExtResource("1_36de5")
 
 [node name="Balloon" type="Control" parent="."]

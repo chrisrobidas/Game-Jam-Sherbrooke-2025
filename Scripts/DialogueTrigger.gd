@@ -5,7 +5,6 @@ extends Highlightable
 const Ballon = preload("res://user_interfaces/balloon.tscn")
 
 @export var dialogue_ressource: DialogueResource
-@export var dialogue_start: String
 @export var image: Texture2D:
 	set(newImage):
 		image = newImage
@@ -15,7 +14,14 @@ const Ballon = preload("res://user_interfaces/balloon.tscn")
 		imageScale = newImageScale
 		$Sprite2D.scale = Vector2(imageScale, imageScale)
 
+func _ready() -> void:
+	super._ready()
+	DialogueManager.dialogue_ended.connect(EnableInteraction)
+
 func Interact() -> void:
-	var ballon: Node = Ballon.instantiate()
-	get_tree().current_scene.add_child(ballon)
-	ballon.start(dialogue_ressource, dialogue_start)
+	SetHovered(false)
+	self.isInteractionEnabled = false
+	DialogueManager.show_dialogue_balloon(dialogue_ressource)
+
+func EnableInteraction(_resource: DialogueResource) -> void:
+	self.isInteractionEnabled = true

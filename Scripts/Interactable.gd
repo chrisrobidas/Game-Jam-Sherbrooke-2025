@@ -21,6 +21,7 @@ func _input(event: InputEvent) -> void:
 		Interact()
 
 func SetHovered(newIsHovered: bool) -> void:
+	if not isInteractionEnabled: return
 	isHovered = newIsHovered
 	$Sprite2D.material.set_shader_parameter("isHovered", isHovered)
 
